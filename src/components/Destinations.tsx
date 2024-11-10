@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Headphones, Users, TrendingUp, DollarSign, ChevronLeft, ChevronRight, MapPin } from 'lucide-react';
 
 const features = [
@@ -38,22 +38,22 @@ const destinations = [
   {
     title: 'Fujairah',
     activities: '1 activity',
-    image: 'https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+    image: 'https://images.unsplash.com/photo-1606046604972-77cc76aee944?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
   },
   {
     title: 'Ras al Khaimah',
-    activities: '1 activity',
-    image: 'https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+    activities: '3 activities',
+    image: 'https://images.unsplash.com/photo-1580674684081-7617fbf3d745?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
   },
   {
     title: 'Sharjah',
     activities: '1 activity',
-    image: 'https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+    image: 'https://images.unsplash.com/photo-1578895101408-1a36b834405b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
   },
   {
     title: 'Hatta',
-    activities: '1 activity',
-    image: 'https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+    activities: '4 activities',
+    image: 'https://images.unsplash.com/photo-1624704765325-fd4868c9702e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
   },
 ];
 
@@ -104,23 +104,32 @@ const adventureActivities = [
 ];
 
 const ExcursionCard = ({ title, location, image }) => (
-  <div className="bg-white rounded-lg shadow-md overflow-hidden">
-    <div className="relative h-48 overflow-hidden">
-      <img src={image} alt={title} className="w-full h-full object-cover" />
+  <div className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300">
+    <div className="relative h-64 overflow-hidden group">
+      <img 
+        src={image} 
+        alt={title} 
+        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
     </div>
-    <div className="p-4">
+    <div className="p-6">
       <div className="flex items-center text-gray-500 text-sm mb-2">
-        <MapPin className="w-4 h-4 mr-1" />
+        <MapPin className="w-4 h-4 mr-1 text-[#FF6B6B]" />
         <span>{location}</span>
       </div>
-      <h3 className="font-semibold text-gray-900">{title}</h3>
+      <h3 className="font-bold text-xl text-gray-900 mb-2 line-clamp-2">{title}</h3>
+      <button className="mt-4 text-[#FF6B6B] font-semibold flex items-center hover:text-[#ff5b5b] transition-colors">
+        Learn More
+        <ChevronRight className="w-4 h-4 ml-1" />
+      </button>
     </div>
   </div>
 );
 
 export default function Destinations() {
-  const [currentTrendingSlide, setCurrentTrendingSlide] = React.useState(0);
-  const [currentAdventureSlide, setCurrentAdventureSlide] = React.useState(0);
+  const [currentTrendingSlide, setCurrentTrendingSlide] = useState(0);
+  const [currentAdventureSlide, setCurrentAdventureSlide] = useState(0);
 
   const slideLeft = (current, setCurrent, maxSlides) => {
     setCurrent(current === 0 ? maxSlides - 1 : current - 1);
@@ -181,68 +190,100 @@ export default function Destinations() {
         </div>
 
         {/* Trending Excursions Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl text-center text-coral-500 font-bold mb-12">
-            Trending Excursions
+        <div className="mb-20">
+          <h2 className="text-3xl text-center font-bold mb-12">
+            <span className="text-[#FF6B6B]">Trending</span> Excursions
           </h2>
-          <div className="relative">
+          <div className="relative px-4 lg:px-8">
             <button
               onClick={() => slideLeft(currentTrendingSlide, setCurrentTrendingSlide, trendingExcursions.length)}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-100"
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow-lg hover:bg-gray-50 transition-colors"
             >
-              <ChevronLeft className="w-6 h-6" />
+              <ChevronLeft className="w-6 h-6 text-gray-600" />
             </button>
-            <div className="overflow-hidden">
+
+            <div className="overflow-hidden mx-8">
               <div
-                className="flex transition-transform duration-500 ease-in-out"
+                className="flex transition-transform duration-500 ease-out"
                 style={{ transform: `translateX(-${currentTrendingSlide * 100}%)` }}
               >
                 {trendingExcursions.map((excursion, index) => (
-                  <div key={index} className="w-full flex-shrink-0 px-4">
+                  <div key={index} className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
                     <ExcursionCard {...excursion} />
                   </div>
                 ))}
               </div>
             </div>
+
             <button
               onClick={() => slideRight(currentTrendingSlide, setCurrentTrendingSlide, trendingExcursions.length)}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-100"
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow-lg hover:bg-gray-50 transition-colors"
             >
-              <ChevronRight className="w-6 h-6" />
+              <ChevronRight className="w-6 h-6 text-gray-600" />
             </button>
+
+            {/* Dots Indicator */}
+            <div className="flex justify-center mt-8 gap-2">
+              {trendingExcursions.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentTrendingSlide(index)}
+                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 
+                    ${index === currentTrendingSlide 
+                      ? "bg-[#FF6B6B] w-8" 
+                      : "bg-gray-300 hover:bg-gray-400"}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
 
         {/* Adventure Activities Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl text-center text-coral-500 font-bold mb-12">
-            Adventure Activities
+        <div className="mb-20">
+          <h2 className="text-3xl text-center font-bold mb-12">
+            <span className="text-[#FF6B6B]">Adventure</span> Activities
           </h2>
-          <div className="relative">
+          <div className="relative px-4 lg:px-8">
             <button
               onClick={() => slideLeft(currentAdventureSlide, setCurrentAdventureSlide, adventureActivities.length)}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-100"
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow-lg hover:bg-gray-50 transition-colors"
             >
-              <ChevronLeft className="w-6 h-6" />
+              <ChevronLeft className="w-6 h-6 text-gray-600" />
             </button>
-            <div className="overflow-hidden">
+
+            <div className="overflow-hidden mx-8">
               <div
-                className="flex transition-transform duration-500 ease-in-out"
+                className="flex transition-transform duration-500 ease-out"
                 style={{ transform: `translateX(-${currentAdventureSlide * 100}%)` }}
               >
                 {adventureActivities.map((activity, index) => (
-                  <div key={index} className="w-full flex-shrink-0 px-4">
+                  <div key={index} className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
                     <ExcursionCard {...activity} />
                   </div>
                 ))}
               </div>
             </div>
+
             <button
               onClick={() => slideRight(currentAdventureSlide, setCurrentAdventureSlide, adventureActivities.length)}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-100"
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow-lg hover:bg-gray-50 transition-colors"
             >
-              <ChevronRight className="w-6 h-6" />
+              <ChevronRight className="w-6 h-6 text-gray-600" />
             </button>
+
+            {/* Dots Indicator */}
+            <div className="flex justify-center mt-8 gap-2">
+              {adventureActivities.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentAdventureSlide(index)}
+                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 
+                    ${index === currentAdventureSlide 
+                      ? "bg-[#FF6B6B] w-8" 
+                      : "bg-gray-300 hover:bg-gray-400"}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

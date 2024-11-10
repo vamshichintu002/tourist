@@ -58,12 +58,18 @@ export default function Component() {
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Reviews Section */}
-        <div className="mb-20">
+        <div className="mb-20 animate-fade-in-up">
           <div className="flex flex-col items-center mb-8">
-            <h3 className="text-2xl font-bold mb-2">Excellent</h3>
+            <h3 className="text-2xl font-bold mb-2 hover:text-[#FF6B6B] transition-colors duration-300">
+              Excellent
+            </h3>
             <div className="flex gap-1 mb-2">
               {[...Array(5)].map((_, i) => (
-                <div key={i} className="w-6 h-6 rounded-full bg-[#00B67A] flex items-center justify-center">
+                <div 
+                  key={i} 
+                  className="w-6 h-6 rounded-full bg-[#00B67A] flex items-center justify-center
+                           hover:scale-110 transition-transform duration-300"
+                >
                   <Star className="w-4 h-4 text-white fill-white" />
                 </div>
               ))}
@@ -86,12 +92,12 @@ export default function Component() {
 
             <div className="overflow-hidden mx-12">
               <div
-                className="flex transition-transform duration-500 ease-in-out"
+                className="flex transition-transform duration-700 ease-out"
                 style={{ transform: `translateX(-${currentReviewSlide * 100}%)` }}
               >
                 {reviews.map((review, index) => (
                   <div key={index} className="w-full flex-shrink-0 px-4">
-                    <div className="border rounded-lg p-6">
+                    <div className="border rounded-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                       <div className="flex items-center gap-4 mb-4">
                         <img
                           src={review.avatar}
@@ -125,8 +131,10 @@ export default function Component() {
         </div>
 
         {/* Partners Section */}
-        <h2 className="text-3xl font-bold text-center text-[#FF6B6B] mb-12">Our Partners</h2>
-        <div className="relative">
+        <h2 className="text-3xl font-bold text-center text-[#FF6B6B] mb-12 animate-fade-in-down">
+          Our Partners
+        </h2>
+        <div className="relative animate-fade-in-up delay-200">
           <button
             onClick={() => setCurrentPartnerSlide((prev) => (prev - 1 + partners.length) % partners.length)}
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-2 shadow-md"
@@ -136,15 +144,19 @@ export default function Component() {
 
           <div className="overflow-hidden mx-12">
             <div
-              className="flex transition-transform duration-500 ease-in-out"
+              className="flex transition-transform duration-700 ease-out"
               style={{ transform: `translateX(-${currentPartnerSlide * 100}%)` }}
             >
               {partners.map((partner, index) => (
-                <div key={index} className="w-full flex-shrink-0 flex items-center justify-center px-4">
+                <div 
+                  key={index} 
+                  className="w-full flex-shrink-0 flex items-center justify-center px-4"
+                >
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                    className="h-16 object-contain grayscale hover:grayscale-0 transition-all duration-500
+                             hover:scale-110 transform"
                   />
                 </div>
               ))}

@@ -90,16 +90,26 @@ import {
     return (
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-[#FF6B6B] mb-16">Our Services</h2>
+          <h2 className="text-3xl font-bold text-center text-[#FF6B6B] mb-16 animate-fade-in-down">
+            Our Services
+          </h2>
   
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {services.map((service, index) => (
-              <div key={index} className="flex flex-col items-start space-y-4">
-                <div className="w-16 h-16 rounded-full bg-[#FFF3F3] flex items-center justify-center">
+              <div 
+                key={index} 
+                className="flex flex-col items-start space-y-4 hover:transform hover:-translate-y-2 transition-all duration-300 animate-fade-in-up"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="w-16 h-16 rounded-full bg-[#FFF3F3] flex items-center justify-center transform hover:rotate-12 transition-all duration-300 hover:scale-110">
                   <service.icon className="w-8 h-8 text-[#FF6B6B]" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
+                <h3 className="text-xl font-semibold text-gray-900 hover:text-[#FF6B6B] transition-colors duration-300">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+                  {service.description}
+                </p>
               </div>
             ))}
           </div>
@@ -108,14 +118,22 @@ import {
             {bottomServices.map((service, index) => (
               <div
                 key={index}
-                className="bg-[#FF6B6B] rounded-lg p-8 text-center flex flex-col items-center space-y-4"
+                className="bg-[#FF6B6B] rounded-lg p-8 text-center flex flex-col items-center space-y-4 
+                           hover:bg-[#ff5b5b] transition-all duration-300 hover:shadow-xl hover:scale-105
+                           animate-fade-in-up cursor-pointer group"
+                style={{ animationDelay: `${(index + services.length) * 100}ms` }}
               >
-                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center 
+                              transform group-hover:rotate-12 transition-all duration-300">
                   <service.icon className="w-8 h-8 text-[#FF6B6B]" />
                 </div>
                 <div className="text-white">
-                  <h3 className="font-semibold text-lg">{service.title}</h3>
-                  <p className="text-sm opacity-90 mt-1">{service.subtitle}</p>
+                  <h3 className="font-semibold text-lg group-hover:scale-105 transition-transform duration-300">
+                    {service.title}
+                  </h3>
+                  <p className="text-sm opacity-90 mt-1 group-hover:opacity-100 transition-opacity duration-300">
+                    {service.subtitle}
+                  </p>
                 </div>
               </div>
             ))}
