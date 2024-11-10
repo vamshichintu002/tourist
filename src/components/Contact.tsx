@@ -47,7 +47,7 @@ export default function Contact() {
               </div>
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors"
+                className="w-full bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-600 transition-colors"
               >
                 Send Message
               </button>
@@ -57,7 +57,7 @@ export default function Contact() {
           <div className="space-y-8">
             <div className="flex items-start">
               <div className="flex-shrink-0">
-                <MapPin className="w-6 h-6 text-blue-600" />
+                <MapPin className="w-6 h-6 text-blue-500" />
               </div>
               <div className="ml-4">
                 <h3 className="text-lg font-medium text-gray-900">Our Location</h3>
@@ -71,7 +71,7 @@ export default function Contact() {
 
             <div className="flex items-start">
               <div className="flex-shrink-0">
-                <Mail className="w-6 h-6 text-blue-600" />
+                <Mail className="w-6 h-6 text-blue-500" />
               </div>
               <div className="ml-4">
                 <h3 className="text-lg font-medium text-gray-900">Email Us</h3>
@@ -81,7 +81,7 @@ export default function Contact() {
 
             <div className="flex items-start">
               <div className="flex-shrink-0">
-                <Phone className="w-6 h-6 text-blue-600" />
+                <Phone className="w-6 h-6 text-blue-500" />
               </div>
               <div className="ml-4">
                 <h3 className="text-lg font-medium text-gray-900">Call Us</h3>

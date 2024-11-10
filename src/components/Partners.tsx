@@ -131,7 +131,7 @@ export default function Component() {
         </div>
 
         {/* Partners Section */}
-        <h2 className="text-3xl font-bold text-center text-[#FF6B6B] mb-12 animate-fade-in-down">
+        <h2 className="text-3xl font-bold text-center text-blue-500 mb-12 animate-fade-in-down">
           Our Partners
         </h2>
         <div className="relative animate-fade-in-up delay-200">
@@ -176,7 +176,7 @@ export default function Component() {
                 key={index}
                 onClick={() => setCurrentPartnerSlide(index)}
                 className={`w-2 h-2 rounded-full transition-colors duration-200 
-                  ${index === currentPartnerSlide ? "bg-[#FF6B6B]" : "bg-gray-300"}`}
+                  ${index === currentPartnerSlide ? "bg-blue-500" : "bg-gray-300"}`}
               />
             ))}
           </div>

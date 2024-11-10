@@ -9,17 +9,17 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Plane className="h-8 w-8 text-[#FF6B6B]" />
+            <Plane className="h-8 w-8 text-blue-500" />
             <span className="ml-2 text-xl font-bold text-gray-800">Wanderlust</span>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-gray-600 hover:text-[#FF6B6B]">Home</a>
-            <a href="#about" className="text-gray-600 hover:text-[#FF6B6B]">About</a>
-            <a href="#services" className="text-gray-600 hover:text-[#FF6B6B]">Services</a>
-            <a href="#destinations" className="text-gray-600 hover:text-[#FF6B6B]">Destinations</a>
-            <a href="#blog" className="text-gray-600 hover:text-[#FF6B6B]">Blog</a>
-            <a href="#contact" className="bg-[#FF6B6B] text-white px-4 py-2 rounded-md hover:bg-[#ff5b5b]">
+            <a href="#home" className="text-gray-600 hover:text-blue-500">Home</a>
+            <a href="#about" className="text-gray-600 hover:text-blue-500">About</a>
+            <a href="#services" className="text-gray-600 hover:text-blue-500">Services</a>
+            <a href="#destinations" className="text-gray-600 hover:text-blue-500">Destinations</a>
+            <a href="#blog" className="text-gray-600 hover:text-blue-500">Blog</a>
+            <a href="#contact" className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
               Contact Us
             </a>
           </div>

@@ -114,12 +114,12 @@ const ExcursionCard = ({ title, location, image }) => (
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
     </div>
     <div className="p-6">
-      <div className="flex items-center text-gray-500 text-sm mb-2">
-        <MapPin className="w-4 h-4 mr-1 text-[#FF6B6B]" />
+      <div className="flex items-center text-blue-500 text-sm mb-2">
+        <MapPin className="w-4 h-4 mr-1 text-blue-500" />
         <span>{location}</span>
       </div>
-      <h3 className="font-bold text-xl text-gray-900 mb-2 line-clamp-2">{title}</h3>
-      <button className="mt-4 text-[#FF6B6B] font-semibold flex items-center hover:text-[#ff5b5b] transition-colors">
+      <h3 className="font-bold text-xl text-gray-900 mb-2 line-clamp-2 hover:text-blue-500 transition-colors">{title}</h3>
+      <button className="mt-4 text-blue-500 font-semibold flex items-center hover:text-blue-600 transition-colors">
         Learn More
         <ChevronRight className="w-4 h-4 ml-1" />
       </button>
@@ -151,8 +151,8 @@ export default function Destinations() {
             {features.map((feature, index) => (
               <div key={index} className="text-center">
                 <div className="flex justify-center mb-4">
-                  <div className="p-3 bg-coral-100 rounded-full">
-                    <feature.icon className="w-8 h-8 text-coral-500" />
+                  <div className="p-3 bg-blue-50 rounded-full">
+                    <feature.icon className="w-8 h-8 text-blue-500" />
                   </div>
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
@@ -192,7 +192,7 @@ export default function Destinations() {
         {/* Trending Excursions Section */}
         <div className="mb-20">
           <h2 className="text-3xl text-center font-bold mb-12">
-            <span className="text-[#FF6B6B]">Trending</span> Excursions
+            <span className="text-blue-500">Trending</span> Excursions
           </h2>
           <div className="relative px-4 lg:px-8">
             <button
@@ -230,7 +230,7 @@ export default function Destinations() {
                   onClick={() => setCurrentTrendingSlide(index)}
                   className={`w-2.5 h-2.5 rounded-full transition-all duration-300 
                     ${index === currentTrendingSlide 
-                      ? "bg-[#FF6B6B] w-8" 
+                      ? "bg-blue-500 w-8" 
                       : "bg-gray-300 hover:bg-gray-400"}`}
                 />
               ))}
@@ -241,7 +241,7 @@ export default function Destinations() {
         {/* Adventure Activities Section */}
         <div className="mb-20">
           <h2 className="text-3xl text-center font-bold mb-12">
-            <span className="text-[#FF6B6B]">Adventure</span> Activities
+            <span className="text-blue-500">Adventure</span> Activities
           </h2>
           <div className="relative px-4 lg:px-8">
             <button
@@ -279,7 +279,7 @@ export default function Destinations() {
                   onClick={() => setCurrentAdventureSlide(index)}
                   className={`w-2.5 h-2.5 rounded-full transition-all duration-300 
                     ${index === currentAdventureSlide 
-                      ? "bg-[#FF6B6B] w-8" 
+                      ? "bg-blue-500 w-8" 
                       : "bg-gray-300 hover:bg-gray-400"}`}
                 />
               ))}

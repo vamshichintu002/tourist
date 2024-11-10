@@ -49,20 +49,20 @@ const Hero: FC = () => {
                     placeholder="Where do you want to go?"
                     className="w-full px-4 py-3 text-gray-700 rounded-md 
                              bg-white transition-all duration-300
-                             focus:outline-none focus:ring-2 focus:ring-[#FF6B6B]
+                             focus:outline-none focus:ring-2 focus:ring-blue-500
                              group-hover:shadow-md"
                   />
-                  <div className="absolute bottom-0 left-0 w-full h-0.5 bg-[#FF6B6B] 
+                  <div className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-500 
                                 scale-x-0 group-hover:scale-x-100 
                                 transition-transform duration-300 origin-left"></div>
                 </div>
               </div>
               
-              <button className="bg-[#FF6B6B] text-white px-8 py-3 rounded-md 
-                               hover:bg-[#ff5b5b] flex items-center justify-center 
-                               transition-all duration-300 hover:shadow-lg
-                               transform hover:-translate-y-1 active:translate-y-0
-                               hover:scale-105">
+              <button className="bg-blue-500 text-white px-8 py-3 rounded-md 
+                       hover:bg-blue-600 flex items-center justify-center 
+                       transition-all duration-300 hover:shadow-lg
+                       transform hover:-translate-y-1 active:translate-y-0
+                       hover:scale-105">
                 <Search className="w-5 h-5 mr-2 animate-pulse" />
                 <span className="font-semibold">Search</span>
               </button>
