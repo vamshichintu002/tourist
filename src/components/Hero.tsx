@@ -14,7 +14,7 @@ const Hero: FC = () => {
           className="absolute min-w-full min-h-full object-cover scale-105 animate-slow-zoom"
         >
           <source
-            src="public/bgvideo.mp4"
+            src="https://devtern.tech/wp-content/uploads/2024/11/Untitled-design-2.mp4"
             type="video/mp4"
           />
           Your browser does not support the video tag.
