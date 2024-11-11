@@ -111,15 +111,16 @@ const ExcursionCard = ({ title, location, image }) => (
         alt={title} 
         className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent 
+                      opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
     </div>
     <div className="p-6">
-      <div className="flex items-center text-blue-500 text-sm mb-2">
-        <MapPin className="w-4 h-4 mr-1 text-blue-500" />
+      <div className="flex items-center text-[#00B2FF] text-sm mb-2">
+        <MapPin className="w-4 h-4 mr-1" />
         <span>{location}</span>
       </div>
-      <h3 className="font-bold text-xl text-gray-900 mb-2 line-clamp-2 hover:text-blue-500 transition-colors">{title}</h3>
-      <button className="mt-4 text-blue-500 font-semibold flex items-center hover:text-blue-600 transition-colors">
+      <h3 className="font-bold text-xl text-gray-900 mb-2 line-clamp-2 hover:text-[#00B2FF] transition-colors">{title}</h3>
+      <button className="mt-4 text-[#00B2FF] font-semibold flex items-center hover:text-[#00E0C6] transition-colors">
         Learn More
         <ChevronRight className="w-4 h-4 ml-1" />
       </button>
@@ -144,18 +145,20 @@ export default function Destinations() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Why Book With Us Section */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Why Book With Wanderlust Tourism
+          <h2 className="text-3xl md:text-4xl font-bold mb-4
+                        bg-gradient-to-r from-[#00B2FF] via-[#00E0C6] to-[#4ADE80] 
+                        text-transparent bg-clip-text">
+            Why Book With Cityview Tourism
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
             {features.map((feature, index) => (
               <div key={index} className="text-center">
                 <div className="flex justify-center mb-4">
-                  <div className="p-3 bg-blue-50 rounded-full">
-                    <feature.icon className="w-8 h-8 text-blue-500" />
+                  <div className="p-3 bg-gradient-to-r from-[#00B2FF]/10 via-[#00E0C6]/10 to-[#4ADE80]/10 rounded-full">
+                    <feature.icon className="w-8 h-8 text-[#00B2FF]" />
                   </div>
                 </div>
-                <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
+                <h3 className="text-lg font-semibold mb-2 hover:text-[#00B2FF] transition-colors">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </div>
             ))}
@@ -164,7 +167,9 @@ export default function Destinations() {
 
         {/* Top Destinations Section */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12
+                        bg-gradient-to-r from-[#00B2FF] via-[#00E0C6] to-[#4ADE80] 
+                        text-transparent bg-clip-text">
             Top Destinations
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -178,7 +183,7 @@ export default function Destinations() {
                   alt={destination.title}
                   className="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent">
                   <div className="absolute bottom-6 left-6 text-white">
                     <h3 className="text-2xl font-bold mb-2">{destination.title}</h3>
                     <p className="text-sm opacity-90">{destination.activities}</p>
@@ -192,14 +197,16 @@ export default function Destinations() {
         {/* Trending Excursions Section */}
         <div className="mb-20">
           <h2 className="text-3xl text-center font-bold mb-12">
-            <span className="text-blue-500">Trending</span> Excursions
+            <span className="bg-gradient-to-r from-[#00B2FF] via-[#00E0C6] to-[#4ADE80] 
+                           text-transparent bg-clip-text">Trending</span> Excursions
           </h2>
           <div className="relative px-4 lg:px-8">
             <button
               onClick={() => slideLeft(currentTrendingSlide, setCurrentTrendingSlide, trendingExcursions.length)}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow-lg hover:bg-gray-50 transition-colors"
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow-lg 
+                       hover:text-[#00B2FF] transition-colors"
             >
-              <ChevronLeft className="w-6 h-6 text-gray-600" />
+              <ChevronLeft className="w-6 h-6" />
             </button>
 
             <div className="overflow-hidden mx-8">
@@ -230,8 +237,8 @@ export default function Destinations() {
                   onClick={() => setCurrentTrendingSlide(index)}
                   className={`w-2.5 h-2.5 rounded-full transition-all duration-300 
                     ${index === currentTrendingSlide 
-                      ? "bg-blue-500 w-8" 
-                      : "bg-gray-300 hover:bg-gray-400"}`}
+                      ? "bg-gradient-to-r from-[#00B2FF] via-[#00E0C6] to-[#4ADE80] w-8" 
+                      : "bg-gray-300 hover:bg-[#00B2FF]"}`}
                 />
               ))}
             </div>
@@ -241,7 +248,8 @@ export default function Destinations() {
         {/* Adventure Activities Section */}
         <div className="mb-20">
           <h2 className="text-3xl text-center font-bold mb-12">
-            <span className="text-blue-500">Adventure</span> Activities
+            <span className="bg-gradient-to-r from-[#00B2FF] via-[#00E0C6] to-[#4ADE80] 
+                           text-transparent bg-clip-text">Adventure</span> Activities
           </h2>
           <div className="relative px-4 lg:px-8">
             <button

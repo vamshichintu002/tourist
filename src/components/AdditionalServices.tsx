@@ -90,7 +90,9 @@ import {
     return (
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-blue-500 mb-16 animate-fade-in-down">
+          <h2 className="text-3xl font-bold text-center mb-16 animate-fade-in-down
+                        bg-gradient-to-r from-[#00B2FF] via-[#00E0C6] to-[#4ADE80] 
+                        text-transparent bg-clip-text">
             Our Services
           </h2>
   
@@ -98,13 +100,16 @@ import {
             {services.map((service, index) => (
               <div 
                 key={index} 
-                className="flex flex-col items-start space-y-4 hover:transform hover:-translate-y-2 transition-all duration-300 animate-fade-in-up"
+                className="flex flex-col items-start space-y-4 hover:transform hover:-translate-y-2 
+                          transition-all duration-300 animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center transform hover:rotate-12 transition-all duration-300 hover:scale-110">
-                  <service.icon className="w-8 h-8 text-blue-500" />
+                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-[#00B2FF]/10 via-[#00E0C6]/10 to-[#4ADE80]/10 
+                              flex items-center justify-center transform hover:rotate-12 transition-all duration-300 
+                              hover:scale-110">
+                  <service.icon className="w-8 h-8 text-[#00B2FF]" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 hover:text-blue-500 transition-colors duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 hover:text-[#00B2FF] transition-colors duration-300">
                   {service.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
@@ -118,14 +123,15 @@ import {
             {bottomServices.map((service, index) => (
               <div
                 key={index}
-                className="bg-blue-500 rounded-lg p-8 text-center flex flex-col items-center space-y-4 
-                           hover:bg-blue-600 transition-all duration-300 hover:shadow-xl hover:scale-105
-                           animate-fade-in-up cursor-pointer group"
+                className="bg-gradient-to-r from-[#00B2FF] via-[#00E0C6] to-[#4ADE80] 
+                          rounded-lg p-8 text-center flex flex-col items-center space-y-4 
+                          hover:shadow-xl hover:scale-105 transition-all duration-300
+                          animate-fade-in-up cursor-pointer group"
                 style={{ animationDelay: `${(index + services.length) * 100}ms` }}
               >
                 <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center 
                               transform group-hover:rotate-12 transition-all duration-300">
-                  <service.icon className="w-8 h-8 text-blue-500" />
+                  <service.icon className="w-8 h-8 text-[#00B2FF]" />
                 </div>
                 <div className="text-white">
                   <h3 className="font-semibold text-lg group-hover:scale-105 transition-transform duration-300">

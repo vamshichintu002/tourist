@@ -14,7 +14,7 @@ const Hero: FC = () => {
           className="absolute min-w-full min-h-full object-cover scale-105 animate-slow-zoom"
         >
           <source
-            src="https://cdn.pixabay.com/video/2018/09/23/18386-291585298_large.mp4"
+            src="public/bgvideo.mp4"
             type="video/mp4"
           />
           Your browser does not support the video tag.
@@ -26,13 +26,15 @@ const Hero: FC = () => {
       <div className="relative h-full flex flex-col justify-center items-center text-white px-4">
         <h1 className="text-4xl md:text-6xl font-bold text-center mb-6 
                       animate-slide-up opacity-0 [animation-delay:300ms] [animation-fill-mode:forwards]
-                      hover:scale-105 transition-transform duration-300">
+                      hover:scale-105 transition-transform duration-300
+                      bg-gradient-to-r from-[#00B2FF] via-[#00E0C6] to-[#4ADE80] 
+                      text-transparent bg-clip-text">
           Discover Your Next Adventure
         </h1>
         
         <p className="text-xl md:text-2xl text-center mb-12 max-w-2xl
                      animate-slide-up opacity-0 [animation-delay:600ms] [animation-fill-mode:forwards]
-                     hover:text-[#FF6B6B] transition-colors duration-300">
+                     hover:text-[#00E0C6] transition-colors duration-300">
           Experience unforgettable journeys with our curated travel packages and expert guidance
         </p>
         
@@ -49,18 +51,20 @@ const Hero: FC = () => {
                     placeholder="Where do you want to go?"
                     className="w-full px-4 py-3 text-gray-700 rounded-md 
                              bg-white transition-all duration-300
-                             focus:outline-none focus:ring-2 focus:ring-blue-500
+                             focus:outline-none focus:ring-2 focus:ring-[#00B2FF]
                              group-hover:shadow-md"
                   />
-                  <div className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-500 
+                  <div className="absolute bottom-0 left-0 w-full h-0.5 
+                                bg-gradient-to-r from-[#00B2FF] via-[#00E0C6] to-[#4ADE80]
                                 scale-x-0 group-hover:scale-x-100 
                                 transition-transform duration-300 origin-left"></div>
                 </div>
               </div>
               
-              <button className="bg-blue-500 text-white px-8 py-3 rounded-md 
-                       hover:bg-blue-600 flex items-center justify-center 
-                       transition-all duration-300 hover:shadow-lg
+              <button className="bg-gradient-to-r from-[#00B2FF] via-[#00E0C6] to-[#4ADE80]
+                       text-white px-8 py-3 rounded-md 
+                       hover:shadow-lg flex items-center justify-center 
+                       transition-all duration-300
                        transform hover:-translate-y-1 active:translate-y-0
                        hover:scale-105">
                 <Search className="w-5 h-5 mr-2 animate-pulse" />

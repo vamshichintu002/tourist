@@ -20,7 +20,9 @@ const Newsletter: FC = () => {
           <div className="w-full md:w-1/3 bg-white rounded-lg p-8 hover:shadow-2xl transition-all duration-300
                          transform hover:-translate-y-1">
             <div className="text-center mb-6">
-              <h2 className="text-3xl font-bold text-gray-900 mb-2 hover:text-blue-500 transition-colors duration-300">
+              <h2 className="text-3xl font-bold mb-2 
+                           bg-gradient-to-r from-[#00B2FF] via-[#00E0C6] to-[#4ADE80] 
+                           text-transparent bg-clip-text">
                 Newsletter
               </h2>
               <p className="text-gray-600">Signup for news and special offers!</p>
@@ -32,8 +34,8 @@ const Newsletter: FC = () => {
                   type="text"
                   placeholder="Name"
                   className="w-full px-4 py-3 border border-gray-300 rounded-md 
-                           focus:ring-2 focus:ring-blue-500 focus:border-transparent
-                           transition-all duration-300"
+                           focus:ring-2 focus:ring-[#00B2FF] focus:border-transparent
+                           hover:border-[#00B2FF] transition-all duration-300"
                   required
                 />
               </div>
@@ -42,20 +44,21 @@ const Newsletter: FC = () => {
                   type="email"
                   placeholder="Email"
                   className="w-full px-4 py-3 border border-gray-300 rounded-md 
-                           focus:ring-2 focus:ring-blue-500 focus:border-transparent
-                           transition-all duration-300"
+                           focus:ring-2 focus:ring-[#00B2FF] focus:border-transparent
+                           hover:border-[#00B2FF] transition-all duration-300"
                   required
                 />
               </div>
               <button
                 type="submit"
-                className="w-full bg-blue-500 text-white py-3 rounded-md 
-                         hover:bg-blue-600 transition-all duration-300
-                         hover:shadow-lg transform hover:-translate-y-1"
+                className="w-full bg-gradient-to-r from-[#00B2FF] via-[#00E0C6] to-[#4ADE80]
+                         text-white py-3 rounded-md transition-all duration-300
+                         hover:shadow-lg transform hover:-translate-y-1
+                         hover:scale-105"
               >
                 Subscribe
               </button>
-              <p className="text-xs text-gray-500 text-center mt-4 hover:text-gray-700 transition-colors duration-300">
+              <p className="text-xs text-gray-500 text-center mt-4 hover:text-[#00B2FF] transition-colors duration-300">
                 You can unsubscribe anytime. For more details, review our Privacy Policy.
               </p>
             </form>

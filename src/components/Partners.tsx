@@ -29,6 +29,10 @@ const reviews = [
 
 const partners = [
   { 
+    name: "Cityview Tourism",
+    logo: "/Cityview-Logo-Registered.svg"
+  },
+  { 
     name: "Dubai Dolphinarium",
     logo: "https://www.dubaidolphinarium.ae/images/logo.png"
   },
@@ -60,15 +64,15 @@ export default function Component() {
         {/* Reviews Section */}
         <div className="mb-20 animate-fade-in-up">
           <div className="flex flex-col items-center mb-8">
-            <h3 className="text-2xl font-bold mb-2 hover:text-[#FF6B6B] transition-colors duration-300">
+            <h3 className="text-2xl font-bold mb-2 hover:text-[#00B2FF] transition-colors duration-300">
               Excellent
             </h3>
             <div className="flex gap-1 mb-2">
               {[...Array(5)].map((_, i) => (
                 <div 
                   key={i} 
-                  className="w-6 h-6 rounded-full bg-[#00B67A] flex items-center justify-center
-                           hover:scale-110 transition-transform duration-300"
+                  className="w-6 h-6 rounded-full bg-gradient-to-r from-[#00B2FF] via-[#00E0C6] to-[#4ADE80] 
+                           flex items-center justify-center hover:scale-110 transition-transform duration-300"
                 >
                   <Star className="w-4 h-4 text-white fill-white" />
                 </div>
@@ -85,7 +89,8 @@ export default function Component() {
           <div className="relative">
             <button
               onClick={() => setCurrentReviewSlide((prev) => (prev - 1 + reviews.length) % reviews.length)}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-2 shadow-md"
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-2 shadow-md
+                       hover:text-[#00B2FF] transition-colors duration-300"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
@@ -111,7 +116,7 @@ export default function Component() {
                       </div>
                       <div className="flex gap-1 mb-2">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-4 h-4 text-[#00B67A] fill-[#00B67A]" />
+                          <Star key={i} className="w-4 h-4 text-[#00B2FF] fill-[#00B2FF]" />
                         ))}
                       </div>
                       <p className="text-sm">{review.text}</p>
@@ -123,7 +128,8 @@ export default function Component() {
 
             <button
               onClick={() => setCurrentReviewSlide((prev) => (prev + 1) % reviews.length)}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-2 shadow-md"
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-2 shadow-md
+                       hover:text-[#00B2FF] transition-colors duration-300"
             >
               <ChevronRight className="w-6 h-6" />
             </button>
@@ -131,13 +137,16 @@ export default function Component() {
         </div>
 
         {/* Partners Section */}
-        <h2 className="text-3xl font-bold text-center text-blue-500 mb-12 animate-fade-in-down">
+        <h2 className="text-3xl font-bold text-center mb-12 animate-fade-in-down
+                      bg-gradient-to-r from-[#00B2FF] via-[#00E0C6] to-[#4ADE80] 
+                      text-transparent bg-clip-text">
           Our Partners
         </h2>
         <div className="relative animate-fade-in-up delay-200">
           <button
             onClick={() => setCurrentPartnerSlide((prev) => (prev - 1 + partners.length) % partners.length)}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-2 shadow-md"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-2 shadow-md
+                     hover:text-[#00B2FF] transition-colors duration-300"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
@@ -165,7 +174,8 @@ export default function Component() {
 
           <button
             onClick={() => setCurrentPartnerSlide((prev) => (prev + 1) % partners.length)}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-2 shadow-md"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-2 shadow-md
+                     hover:text-[#00B2FF] transition-colors duration-300"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
@@ -175,8 +185,10 @@ export default function Component() {
               <button
                 key={index}
                 onClick={() => setCurrentPartnerSlide(index)}
-                className={`w-2 h-2 rounded-full transition-colors duration-200 
-                  ${index === currentPartnerSlide ? "bg-blue-500" : "bg-gray-300"}`}
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 
+                  ${index === currentPartnerSlide 
+                    ? "bg-gradient-to-r from-[#00B2FF] via-[#00E0C6] to-[#4ADE80] w-8" 
+                    : "bg-gray-300 hover:bg-[#00B2FF]"}`}
               />
             ))}
           </div>
