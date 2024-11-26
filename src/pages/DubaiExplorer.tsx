@@ -20,7 +20,7 @@ function DubaiExplorer() {
     <div className="min-h-screen bg-gray-50">
       <Link 
         to="/" 
-        className="fixed top-4 left-4 z-50 flex items-center gap-2 px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full shadow-lg hover:bg-white transition-colors"
+        className="fixed top-24 left-4 z-50 flex items-center gap-2 px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full shadow-lg hover:bg-white transition-colors"
         data-aos="fade-right"
         data-aos-duration="600"
       >
