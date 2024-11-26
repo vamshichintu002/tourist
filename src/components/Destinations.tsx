@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Headphones, Users, TrendingUp, DollarSign, ChevronLeft, ChevronRight, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const features = [
   {
@@ -29,32 +32,20 @@ const destinations = [
     title: 'Dubai',
     activities: '22 activities',
     image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+    link: '/dubai'
   },
   {
     title: 'Abu Dhabi',
     activities: '6 activities',
     image: 'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-  },
-  {
-    title: 'Fujairah',
-    activities: '1 activity',
-    image: 'https://images.unsplash.com/photo-1606046604972-77cc76aee944?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-  },
-  {
-    title: 'Ras al Khaimah',
-    activities: '3 activities',
-    image: 'https://images.unsplash.com/photo-1580674684081-7617fbf3d745?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+    link: '/abu-dhabi'
   },
   {
     title: 'Sharjah',
     activities: '1 activity',
     image: 'https://images.unsplash.com/photo-1578895101408-1a36b834405b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-  },
-  {
-    title: 'Hatta',
-    activities: '4 activities',
-    image: 'https://images.unsplash.com/photo-1624704765325-fd4868c9702e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-  },
+    link: '/sharjah'
+  }
 ];
 
 const trendingExcursions = [
@@ -103,30 +94,32 @@ const adventureActivities = [
   },
 ];
 
-const ExcursionCard = ({ title, location, image }) => (
-  <div className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300">
-    <div className="relative h-64 overflow-hidden group">
-      <img 
-        src={image} 
-        alt={title} 
-        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+const ExcursionCard = ({ title, location, image, link }) => {
+  const content = (
+    <div className="relative h-[300px] w-full overflow-hidden rounded-lg">
+      <img
+        src={image}
+        alt={title}
+        className="h-full w-full object-cover transition-transform duration-300 hover:scale-110"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent 
-                      opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-    </div>
-    <div className="p-6">
-      <div className="flex items-center text-[#00B2FF] text-sm mb-2">
-        <MapPin className="w-4 h-4 mr-1" />
-        <span>{location}</span>
+      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+        <h3 className="text-xl font-semibold text-white">{title}</h3>
+        <div className="mt-2 flex items-center text-white">
+          <MapPin className="mr-1 h-4 w-4" />
+          <span>{location}</span>
+        </div>
       </div>
-      <h3 className="font-bold text-xl text-gray-900 mb-2 line-clamp-2 hover:text-[#00B2FF] transition-colors">{title}</h3>
-      <button className="mt-4 text-[#00B2FF] font-semibold flex items-center hover:text-[#00E0C6] transition-colors">
-        Learn More
-        <ChevronRight className="w-4 h-4 ml-1" />
-      </button>
     </div>
-  </div>
-);
+  );
+
+  return link ? (
+    <Link to={link} className="block">
+      {content}
+    </Link>
+  ) : (
+    content
+  );
+};
 
 export default function Destinations() {
   const [currentTrendingSlide, setCurrentTrendingSlide] = useState(0);
@@ -144,7 +137,7 @@ export default function Destinations() {
     <section id="destinations" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Why Book With Us Section */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-4
                         bg-gradient-to-r from-[#00B2FF] via-[#00E0C6] to-[#4ADE80] 
                         text-transparent bg-clip-text">
@@ -152,7 +145,7 @@ export default function Destinations() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
             {features.map((feature, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center" data-aos="fade-up" data-aos-delay={index * 100}>
                 <div className="flex justify-center mb-4">
                   <div className="p-3 bg-gradient-to-r from-[#00B2FF]/10 via-[#00E0C6]/10 to-[#4ADE80]/10 rounded-full">
                     <feature.icon className="w-8 h-8 text-[#00B2FF]" />
@@ -166,7 +159,7 @@ export default function Destinations() {
         </div>
 
         {/* Top Destinations Section */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-12
                         bg-gradient-to-r from-[#00B2FF] via-[#00E0C6] to-[#4ADE80] 
                         text-transparent bg-clip-text">
@@ -174,28 +167,15 @@ export default function Destinations() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {destinations.map((destination, index) => (
-              <div
-                key={index}
-                className="relative overflow-hidden rounded-lg group cursor-pointer"
-              >
-                <img
-                  src={destination.image}
-                  alt={destination.title}
-                  className="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent">
-                  <div className="absolute bottom-6 left-6 text-white">
-                    <h3 className="text-2xl font-bold mb-2">{destination.title}</h3>
-                    <p className="text-sm opacity-90">{destination.activities}</p>
-                  </div>
-                </div>
+              <div key={index} data-aos="fade-up" data-aos-delay={index * 200}>
+                <ExcursionCard {...destination} />
               </div>
             ))}
           </div>
         </div>
 
         {/* Trending Excursions Section */}
-        <div className="mb-20">
+        <div className="mb-20" data-aos="fade-up">
           <h2 className="text-3xl text-center font-bold mb-12">
             <span className="bg-gradient-to-r from-[#00B2FF] via-[#00E0C6] to-[#4ADE80] 
                            text-transparent bg-clip-text">Trending</span> Excursions
@@ -246,7 +226,7 @@ export default function Destinations() {
         </div>
 
         {/* Adventure Activities Section */}
-        <div className="mb-20">
+        <div className="mb-20" data-aos="fade-up">
           <h2 className="text-3xl text-center font-bold mb-12">
             <span className="bg-gradient-to-r from-[#00B2FF] via-[#00E0C6] to-[#4ADE80] 
                            text-transparent bg-clip-text">Adventure</span> Activities

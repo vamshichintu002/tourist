@@ -1,7 +1,20 @@
-import { type FC } from 'react';
+import { useState } from 'react';
 import { Search } from 'lucide-react';
+import { globalSearch, GlobalSearchResult } from '../utils/globalSearch';
+import GlobalSearchResults from './GlobalSearchResults';
 
-const Hero: FC = () => {
+const Hero = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchResults, setSearchResults] = useState<GlobalSearchResult[]>([]);
+  const [isSearching, setIsSearching] = useState(false);
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    const results = globalSearch(searchQuery);
+    setSearchResults(results);
+    setIsSearching(true);
+  };
+
   return (
     <div className="relative h-screen">
       {/* Background Video with Zoom Effect */}
@@ -39,7 +52,7 @@ const Hero: FC = () => {
         </p>
         
         {/* Search Box with Enhanced Animations */}
-        <div className="w-full max-w-3xl animate-slide-up opacity-0 [animation-delay:900ms] [animation-fill-mode:forwards]">
+        <form onSubmit={handleSearch} className="w-full max-w-3xl animate-slide-up opacity-0 [animation-delay:900ms] [animation-fill-mode:forwards]">
           <div className="bg-white/90 backdrop-blur-sm rounded-lg shadow-xl p-2 
                          hover:shadow-2xl transition-all duration-500 
                          hover:bg-white/95">
@@ -48,6 +61,8 @@ const Hero: FC = () => {
                 <div className="relative">
                   <input
                     type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder="Where do you want to go?"
                     className="w-full px-4 py-3 text-gray-700 rounded-md 
                              bg-white transition-all duration-300
@@ -61,7 +76,8 @@ const Hero: FC = () => {
                 </div>
               </div>
               
-              <button className="bg-gradient-to-r from-[#00B2FF] via-[#00E0C6] to-[#4ADE80]
+              <button type="submit" 
+                      className="bg-gradient-to-r from-[#00B2FF] via-[#00E0C6] to-[#4ADE80]
                        text-white px-8 py-3 rounded-md 
                        hover:shadow-lg flex items-center justify-center 
                        transition-all duration-300
@@ -72,8 +88,19 @@ const Hero: FC = () => {
               </button>
             </div>
           </div>
-        </div>
+        </form>
       </div>
+
+      {isSearching && (
+        <GlobalSearchResults 
+          results={searchResults} 
+          onClose={() => {
+            setIsSearching(false);
+            setSearchResults([]);
+            setSearchQuery('');
+          }} 
+        />
+      )}
     </div>
   );
 };
