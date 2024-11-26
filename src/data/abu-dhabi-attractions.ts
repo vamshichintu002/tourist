@@ -14,7 +14,6 @@ export const categories: CategoryType[] = [
         location: 'Sheikh Rashid Bin Saeed Street',
         duration: '2-3 hours',
         category: 'Religious Site',
-        price: 'Free',
         image: '/api/placeholder/800/600',
         highlights: [
           "82 white marble domes",
@@ -31,7 +30,6 @@ export const categories: CategoryType[] = [
         location: 'Al Ras Al Akhdar',
         duration: '2-3 hours',
         category: 'Palace',
-        price: '$30',
         image: '/api/placeholder/800/600',
         highlights: [
           "Presidential palace tours",
@@ -56,7 +54,6 @@ export const categories: CategoryType[] = [
         location: 'West Corniche Road',
         duration: '2-3 hours',
         category: 'Luxury',
-        price: 'Varies',
         image: '/api/placeholder/800/600',
         highlights: [
           "Gold-leaf interior",
@@ -73,7 +70,6 @@ export const categories: CategoryType[] = [
         location: 'Saadiyat Cultural District',
         duration: '3-4 hours',
         category: 'Museum',
-        price: '$40',
         image: '/api/placeholder/800/600',
         highlights: [
           "Iconic dome architecture",
@@ -90,7 +86,6 @@ export const categories: CategoryType[] = [
         location: 'Abu Mureikhah',
         duration: '1-2 hours',
         category: 'Religious Site',
-        price: 'Free',
         image: '/api/placeholder/800/600',
         highlights: [
           "Traditional architecture",
@@ -115,7 +110,6 @@ export const categories: CategoryType[] = [
         location: 'Yas Island',
         duration: 'Multiple Days',
         category: 'Entertainment',
-        price: 'Varies',
         image: '/api/placeholder/800/600',
         highlights: [
           "Theme parks",
@@ -132,7 +126,6 @@ export const categories: CategoryType[] = [
         location: 'Yas Island',
         duration: 'Full Day',
         category: 'Theme Park',
-        price: '$80',
         image: '/api/placeholder/800/600',
         highlights: [
           "Formula Rossa coaster",
@@ -149,7 +142,6 @@ export const categories: CategoryType[] = [
         location: 'Yas Island',
         duration: 'Full Day',
         category: 'Water Park',
-        price: '$75',
         image: '/api/placeholder/800/600',
         highlights: [
           "40+ rides and slides",
@@ -166,7 +158,6 @@ export const categories: CategoryType[] = [
         location: 'Yas Island',
         duration: 'Full Day',
         category: 'Theme Park',
-        price: '$80',
         image: '/api/placeholder/800/600',
         highlights: [
           "Themed zones",
@@ -191,7 +182,6 @@ export const categories: CategoryType[] = [
         location: 'Corniche Road',
         duration: '2-3 hours',
         category: 'Waterfront',
-        price: 'Free',
         image: '/api/placeholder/800/600',
         highlights: [
           "8km promenade",
@@ -208,7 +198,6 @@ export const categories: CategoryType[] = [
         location: 'Saadiyat Island',
         duration: 'Full Day',
         category: 'Island',
-        price: 'Varies',
         image: '/api/placeholder/800/600',
         highlights: [
           "White sand beaches",
@@ -225,7 +214,6 @@ export const categories: CategoryType[] = [
         location: 'Sir Bani Yas Island',
         duration: 'Multiple Days',
         category: 'Island',
-        price: 'Varies',
         image: '/api/placeholder/800/600',
         highlights: [
           "Wildlife safari",

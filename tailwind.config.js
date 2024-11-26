@@ -84,7 +84,11 @@ export default {
           '100%': {
             transform: 'scale(1.1)'
           },
-        }
+        },
+        'fadeIn': {
+          '0%': { opacity: '0', transform: 'scale(0.95)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
       },
       animation: {
         'fade-in-down': 'fade-in-down 0.5s ease-out',
@@ -93,6 +97,7 @@ export default {
         'slide-up': 'slide-up 0.8s ease-out',
         'slow-zoom': 'slow-zoom 20s linear infinite alternate',
         'spin-slow': 'spin 3s linear infinite',
+        'fadeIn': 'fadeIn 0.3s ease-out',
       },
       borderRadius: {
         lg: "var(--radius)",

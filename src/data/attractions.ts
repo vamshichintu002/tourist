@@ -14,7 +14,6 @@ export const categories: CategoryType[] = [
         location: 'Downtown Dubai',
         duration: '3-4 hours',
         category: 'Shopping',
-        price: 'Free Entry',
         image: '/api/placeholder/800/600',
         highlights: [
           "Over 1,200 retail outlets",
@@ -31,7 +30,6 @@ export const categories: CategoryType[] = [
         location: 'Dubai Mall',
         duration: '1-2 hours',
         category: 'Entertainment',
-        price: '$35',
         image: '/api/placeholder/800/600',
         highlights: [
           "10-million liter tank",
@@ -48,7 +46,6 @@ export const categories: CategoryType[] = [
         location: 'Downtown Dubai',
         duration: '30 minutes',
         category: 'Entertainment',
-        price: 'Free',
         image: '/api/placeholder/800/600',
         highlights: [
           "Musical performances",
@@ -65,7 +62,6 @@ export const categories: CategoryType[] = [
         location: 'Al Barsha',
         duration: '2-3 hours',
         category: 'Shopping',
-        price: 'Free Entry',
         image: '/api/placeholder/800/600',
         highlights: [
           "Ski Dubai indoor resort",
@@ -82,7 +78,6 @@ export const categories: CategoryType[] = [
         location: 'Palm Jumeirah',
         duration: '2-3 hours',
         category: 'Shopping',
-        price: 'Free Entry',
         image: '/api/placeholder/800/600',
         highlights: [
           "Premium retail stores",
@@ -99,7 +94,6 @@ export const categories: CategoryType[] = [
         location: 'Palm Jumeirah',
         duration: '2-3 hours',
         category: 'Entertainment',
-        price: 'Free Entry',
         image: '/api/placeholder/800/600',
         highlights: [
           "Palm fountain show",
@@ -124,7 +118,6 @@ export const categories: CategoryType[] = [
         location: 'Downtown Dubai',
         duration: '1-2 hours',
         category: 'Architecture',
-        price: '$40-80',
         image: '/api/placeholder/800/600',
         highlights: [
           "At the Top observation deck",
@@ -141,7 +134,6 @@ export const categories: CategoryType[] = [
         location: 'Zabeel Park',
         duration: '1-2 hours',
         category: 'Architecture',
-        price: '$20',
         image: '/api/placeholder/800/600',
         highlights: [
           "Glass walkway",
@@ -158,7 +150,6 @@ export const categories: CategoryType[] = [
         location: 'Sheikh Zayed Road',
         duration: '2-3 hours',
         category: 'Museum',
-        price: '$40',
         image: '/api/placeholder/800/600',
         highlights: [
           "Interactive exhibitions",
@@ -175,7 +166,6 @@ export const categories: CategoryType[] = [
         location: 'Palm Jumeirah',
         duration: '1-2 hours',
         category: 'Observation Deck',
-        price: '$30',
         image: '/api/placeholder/800/600',
         highlights: [
           "360-degree views",
@@ -200,7 +190,6 @@ export const categories: CategoryType[] = [
         location: 'Dubailand',
         duration: '2-3 hours',
         category: 'Garden',
-        price: '$15',
         image: '/api/placeholder/800/600',
         highlights: [
           "Floral displays",
@@ -217,7 +206,6 @@ export const categories: CategoryType[] = [
         location: 'Dubailand',
         duration: '4-5 hours',
         category: 'Cultural Park',
-        price: '$5',
         image: '/api/placeholder/800/600',
         highlights: [
           "International pavilions",
@@ -234,7 +222,6 @@ export const categories: CategoryType[] = [
         location: 'Zabeel Park',
         duration: '2-3 hours',
         category: 'Entertainment',
-        price: '$15',
         image: '/api/placeholder/800/600',
         highlights: [
           "LED light displays",
@@ -259,7 +246,6 @@ export const categories: CategoryType[] = [
         location: 'Dubai Marina',
         duration: '2-3 hours',
         category: 'Waterfront',
-        price: 'Free',
         image: '/api/placeholder/800/600',
         highlights: [
           "Marina Walk",
@@ -276,7 +262,6 @@ export const categories: CategoryType[] = [
         location: 'Deira',
         duration: '2-3 hours',
         category: 'Heritage',
-        price: 'Free',
         image: '/api/placeholder/800/600',
         highlights: [
           "Abra rides",
@@ -293,7 +278,6 @@ export const categories: CategoryType[] = [
         location: 'Jumeirah Beach Residence',
         duration: '3-4 hours',
         category: 'Beach',
-        price: 'Free',
         image: '/api/placeholder/800/600',
         highlights: [
           "Beach activities",
@@ -310,7 +294,6 @@ export const categories: CategoryType[] = [
         location: 'Dubai Marina',
         duration: '2-3 hours',
         category: 'Island',
-        price: 'Free Entry',
         image: '/api/placeholder/800/600',
         highlights: [
           "Ain Dubai",
@@ -327,7 +310,6 @@ export const categories: CategoryType[] = [
         location: 'Palm Jumeirah',
         duration: '4-5 hours',
         category: 'Island',
-        price: 'Free Access',
         image: '/api/placeholder/800/600',
         highlights: [
           "Luxury hotels",
@@ -352,7 +334,6 @@ export const categories: CategoryType[] = [
         location: 'Palm Jumeirah',
         duration: 'Full Day',
         category: 'Water Park',
-        price: '$80',
         image: '/api/placeholder/800/600',
         highlights: [
           "Water slides",
@@ -369,7 +350,6 @@ export const categories: CategoryType[] = [
         location: 'Palm Jumeirah',
         duration: '30 minutes',
         category: 'Transport',
-        price: '$15',
         image: '/api/placeholder/800/600',
         highlights: [
           "Palm views",
@@ -386,7 +366,6 @@ export const categories: CategoryType[] = [
         location: 'Atlantis The Palm',
         duration: '2-3 hours',
         category: 'Aquarium',
-        price: '$35',
         image: '/api/placeholder/800/600',
         highlights: [
           "Themed exhibits",
@@ -403,7 +382,6 @@ export const categories: CategoryType[] = [
         location: 'Creek Park',
         duration: '2-3 hours',
         category: 'Entertainment',
-        price: '$40',
         image: '/api/placeholder/800/600',
         highlights: [
           "Dolphin shows",
@@ -420,7 +398,6 @@ export const categories: CategoryType[] = [
         location: 'Dubai Creek/Marina',
         duration: '2-3 hours',
         category: 'Cruise',
-        price: '$50',
         image: '/api/placeholder/800/600',
         highlights: [
           "Buffet dinner",
@@ -445,7 +422,6 @@ export const categories: CategoryType[] = [
         location: 'Dubai Desert',
         duration: '6-7 hours',
         category: 'Adventure',
-        price: '$70',
         image: '/api/placeholder/800/600',
         highlights: [
           "Dune bashing",
@@ -462,7 +438,6 @@ export const categories: CategoryType[] = [
         location: 'Dubai Marina',
         duration: '3-4 hours',
         category: 'Adventure',
-        price: '$500',
         image: '/api/placeholder/800/600',
         highlights: [
           "Tandem jumps",
@@ -479,7 +454,6 @@ export const categories: CategoryType[] = [
         location: 'Dubai Desert',
         duration: '4-5 hours',
         category: 'Adventure',
-        price: '$300',
         image: '/api/placeholder/800/600',
         highlights: [
           "Desert sunrise",
@@ -496,7 +470,6 @@ export const categories: CategoryType[] = [
         location: 'Dubai Marina',
         duration: '1 hour',
         category: 'Adventure',
-        price: '$150',
         image: '/api/placeholder/800/600',
         highlights: [
           "Urban zipline",
@@ -513,7 +486,6 @@ export const categories: CategoryType[] = [
         location: 'Various Locations',
         duration: '12-25 minutes',
         category: 'Adventure',
-        price: '$200',
         image: '/api/placeholder/800/600',
         highlights: [
           "Aerial photography",
@@ -538,7 +510,6 @@ export const categories: CategoryType[] = [
         location: 'Dubailand',
         duration: 'Full Day',
         category: 'Theme Park',
-        price: '$80',
         image: '/api/placeholder/800/600',
         highlights: [
           "Marvel Zone",
@@ -555,7 +526,6 @@ export const categories: CategoryType[] = [
         location: 'Dubai Parks And Resorts',
         duration: 'Full Day',
         category: 'Theme Park',
-        price: '$90',
         image: '/api/placeholder/800/600',
         highlights: [
           "Motiongate Dubai",
@@ -580,7 +550,6 @@ export const categories: CategoryType[] = [
         location: 'Dubai Creek',
         duration: '30 minutes',
         category: 'Cultural',
-        price: '$1',
         image: '/api/placeholder/800/600',
         highlights: [
           "Traditional experience",
@@ -597,7 +566,6 @@ export const categories: CategoryType[] = [
         location: 'Jumeirah',
         duration: '2-3 hours',
         category: 'Shopping',
-        price: 'Free Entry',
         image: '/api/placeholder/800/600',
         highlights: [
           "Traditional architecture",
@@ -614,7 +582,6 @@ export const categories: CategoryType[] = [
         location: 'Hatta',
         duration: 'Full Day',
         category: 'Adventure',
-        price: '$100',
         image: '/api/placeholder/800/600',
         highlights: [
           "Mountain views",
@@ -639,7 +606,6 @@ export const categories: CategoryType[] = [
         location: 'Al Warqa',
         duration: '4-5 hours',
         category: 'Wildlife',
-        price: '$40',
         image: '/api/placeholder/800/600',
         highlights: [
           "African village",

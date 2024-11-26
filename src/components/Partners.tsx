@@ -5,52 +5,36 @@ import { useState } from "react"
 
 const reviews = [
   {
-    name: "Go31007465573",
-    date: "2023.10.10",
+    name: "Priya Sharma",
+    date: "2024.10.10",
     rating: 5,
-    text: "Amazing Experience 🥰 🥰 Amazing trip provide by Bedouin trips.All the excursions was well-organized and...",
+    text: "Amazing Experience! 🥰 The Dubai desert safari was absolutely fantastic. The team took care of everything from pickup to drop-off. Highly recommend their services...",
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=40&h=40&q=80"
   },
   {
-    name: "Aliya O",
+    name: "Rajesh Patel",
     date: "2023.10.15",
     rating: 5,
-    text: "Unforgettable moments Tour was a fantastic experience. Our guide was informative, taking us to...",
+    text: "Unforgettable Dubai experience! Our guide Hamad was very knowledgeable and friendly. The Burj Khalifa tour and Dubai Mall visit were perfectly organized...",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=40&h=40&q=80"
   },
   {
-    name: "Justin B",
-    date: "2023.10.12",
+    name: "Ananya Mehta",
+    date: "2024.10.12",
     rating: 5,
-    text: "Perfect Dubai City Tour I recently booked the Dubai City Tour from Bedouin Trips, and I have to admit that they...",
+    text: "Perfect Dubai City Tour! The whole experience was magical. From the Dubai Frame to the Palm Jumeirah, everything was well-planned. The team went above and beyond...",
     avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=40&h=40&q=80"
   }
 ]
 
 const partners = [
   { 
-    name: "Cityview Tourism",
-    logo: "/Cityview-Logo-Registered.svg"
+    name: "First Line Partners",
+    logo: "/1st line partner.jpg"
   },
   { 
-    name: "Dubai Dolphinarium",
-    logo: "https://www.dubaidolphinarium.ae/images/logo.png"
-  },
-  { 
-    name: "Dubai Parks",
-    logo: "https://www.dubaiparksandresorts.com/images/logo.png"
-  },
-  { 
-    name: "Ferrari World",
-    logo: "https://ferrariworldabudhabi.com/en/logo.png"
-  },
-  { 
-    name: "Heli Dubai",
-    logo: "https://www.helidubai.com/images/logo.png"
-  },
-  { 
-    name: "Jumeirah Hotels",
-    logo: "https://www.jumeirah.com/images/logo.png"
+    name: "Second Line Partners",
+    logo: "/2nd line.jpg"
   }
 ]
 

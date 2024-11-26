@@ -14,7 +14,6 @@ export const categories: CategoryType[] = [
         location: 'Khor Fakkan',
         duration: '3-4 hours',
         category: 'Beach',
-        price: 'Free',
         image: '/api/placeholder/800/600',
         highlights: [
           "Pristine sandy beach",
@@ -27,18 +26,17 @@ export const categories: CategoryType[] = [
       {
         id: 'al-majaz-waterfront',
         name: 'Al Majaz Waterfront',
-        description: 'A family-friendly destination with restaurants, fountains, and recreational activities.',
+        description: 'A popular leisure destination with restaurants and entertainment.',
         location: 'Khalid Lagoon',
         duration: '2-3 hours',
         category: 'Waterfront',
-        price: 'Free Entry',
-        image: '/api/placeholder/800/600',
+        image: '/sharjah/majaz-waterfront.jpg',
         highlights: [
           "Musical fountain",
-          "Waterfront restaurants",
-          "Children's play areas",
-          "Mini golf",
-          "Jogging track"
+          "Restaurants",
+          "Family activities",
+          "Walking paths",
+          "Events venue"
         ]
       }
     ]
@@ -56,7 +54,6 @@ export const categories: CategoryType[] = [
         location: 'Arts Area, Heart of Sharjah',
         duration: '2-3 hours',
         category: 'Museum',
-        price: 'Free',
         image: '/api/placeholder/800/600',
         highlights: [
           "Contemporary art collections",
@@ -73,7 +70,6 @@ export const categories: CategoryType[] = [
         location: 'Heart of Sharjah',
         duration: '1-2 hours',
         category: 'Museum',
-        price: '$5',
         image: '/api/placeholder/800/600',
         highlights: [
           "Arabic calligraphy exhibits",
@@ -90,7 +86,6 @@ export const categories: CategoryType[] = [
         location: 'Heart of Sharjah',
         duration: '3-4 hours',
         category: 'Heritage',
-        price: 'Free',
         image: '/api/placeholder/800/600',
         highlights: [
           "Traditional architecture",
@@ -103,18 +98,17 @@ export const categories: CategoryType[] = [
       {
         id: 'islamic-civilization-museum',
         name: 'Sharjah Museum of Islamic Civilization',
-        description: 'Displays Islamic artifacts and manuscripts, offering insights into Islamic history and culture.',
+        description: 'A cultural institution showcasing Islamic art and history.',
         location: 'Corniche Street',
         duration: '2-3 hours',
         category: 'Museum',
-        price: '$10',
-        image: '/api/placeholder/800/600',
+        image: '/sharjah/islamic-museum.jpg',
         highlights: [
           "Islamic artifacts",
-          "Historical manuscripts",
-          "Scientific innovations",
-          "Islamic art gallery",
-          "Educational tours"
+          "Cultural exhibits",
+          "Historical displays",
+          "Educational programs",
+          "Guided tours"
         ]
       }
     ]
@@ -132,7 +126,6 @@ export const categories: CategoryType[] = [
         location: 'Khalid Lagoon',
         duration: '2-3 hours',
         category: 'Nature',
-        price: '$15',
         image: '/api/placeholder/800/600',
         highlights: [
           "Butterfly house",
@@ -149,7 +142,6 @@ export const categories: CategoryType[] = [
         location: 'Al Montazah',
         duration: '4-5 hours',
         category: 'Theme Park',
-        price: '$25',
         image: '/api/placeholder/800/600',
         highlights: [
           "Water park",
@@ -174,7 +166,6 @@ export const categories: CategoryType[] = [
         location: 'Al Khan',
         duration: '1-2 hours',
         category: 'Aquarium',
-        price: '$15',
         image: '/api/placeholder/800/600',
         highlights: [
           "Marine life exhibits",
@@ -191,7 +182,6 @@ export const categories: CategoryType[] = [
         location: 'Airport Road',
         duration: '2-3 hours',
         category: 'Museum',
-        price: '$10',
         image: '/api/placeholder/800/600',
         highlights: [
           "Interactive exhibits",
@@ -216,7 +206,6 @@ export const categories: CategoryType[] = [
         location: 'Mleiha Desert',
         duration: '3-4 hours',
         category: 'Museum',
-        price: '$20',
         image: '/api/placeholder/800/600',
         highlights: [
           "Archaeological exhibits",
@@ -233,7 +222,6 @@ export const categories: CategoryType[] = [
         location: 'Industrial Area',
         duration: '1-2 hours',
         category: 'Museum',
-        price: '$10',
         image: '/api/placeholder/800/600',
         highlights: [
           "Vintage car collection",
@@ -258,7 +246,6 @@ export const categories: CategoryType[] = [
         location: 'King Faisal Street',
         duration: '2-3 hours',
         category: 'Shopping',
-        price: 'Free Entry',
         image: '/api/placeholder/800/600',
         highlights: [
           "Traditional architecture",
@@ -275,7 +262,6 @@ export const categories: CategoryType[] = [
         location: 'Al Qasba',
         duration: '2-3 hours',
         category: 'Entertainment',
-        price: 'Free Entry',
         image: '/api/placeholder/800/600',
         highlights: [
           "Eye of the Emirates",
@@ -292,7 +278,6 @@ export const categories: CategoryType[] = [
         location: 'Various Locations',
         duration: 'Evening Events',
         category: 'Event',
-        price: 'Free',
         image: '/api/placeholder/800/600',
         highlights: [
           "Light installations",
