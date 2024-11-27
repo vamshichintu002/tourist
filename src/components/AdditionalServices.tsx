@@ -3,14 +3,14 @@ import {
   Plane,
   Building2,
   User,
-  Star,
+  Car,
+  FileCheck,
+  Building,
+  DollarSign,
   Headphones,
   Users2,
   Recycle,
-  DollarSign,
-  Building,
-  FileCheck,
-  Car,
+  Star,
 } from "lucide-react"
 
 const services = [
@@ -33,36 +33,24 @@ const services = [
       "We can give the greatest packages that will ensure our clients' happiness based on our thorough understanding of our customers, large inventory, and quality measures.",
   },
   {
-    icon: Star,
-    title: "VIP services",
-    description:
-      "We provide VIP special request services such as private aircraft charters, limousine rentals, luxury accommodations, and private island party arrangements in addition to our standard premium services.",
-  },
-  {
-    icon: Recycle,
-    title: "Ancillary products",
-    description:
-      "We offer visa processing, trip insurance, cruises, and transfers in addition to flights, hotels, and activities.",
-  },
-  {
     icon: FileCheck,
     title: "UAE Visa Services",
     description:
-      "We offer visa processing, trip insurance, cruises, and transfers in addition to flights, hotels, and activities.",
+      "We provide comprehensive visa services for UAE, ensuring a smooth and hassle-free process for our clients.",
   },
   {
-    icon: Headphones,
-    title: "Quality customer service",
+    icon: Car,
+    title: "Transportation Services",
     description:
-      "Our company's DNA is etched with quality. We think that providing high-quality products and services will assure customer pleasure, thus we adhere to the highest quality standards in all we do.",
+      "Professional transportation services including tour transportation, event transportation, corporate transportation, and chauffeur services.",
   },
   {
-    icon: Users2,
-    title: "Dedicated travel account manager",
+    icon: Building,
+    title: "UAE Attractions",
     description:
-      "Each client will be assigned a personal travel account manager who will ensure that all of the client's needs and requirements are met in the most efficient manner possible.",
+      "Book tickets for the most popular attractions across UAE, from theme parks to cultural sites and desert adventures.",
   },
-]
+];
 
 const bottomServices = [
   {
@@ -97,7 +85,7 @@ const AdditionalServices = () => {
           Our Services
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {services.map((service, index) => (
             <div
               key={index}

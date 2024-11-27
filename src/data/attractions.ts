@@ -102,6 +102,22 @@ export const categories: CategoryType[] = [
           "Beach access",
           "Atlantis views"
         ]
+      },
+      {
+        id: 'souk-madinat-jumeirah',
+        name: 'Souk Madinat Jumeirah',
+        description: 'A traditional Arabian souk within the Madinat Jumeirah complex, offering a unique shopping experience with traditional artifacts, textiles, and souvenirs.',
+        location: 'Jumeirah',
+        duration: '2-3 hours',
+        category: 'Shopping',
+        image: 'https://photosofplaces.netlify.app/images/dubai/Souk-Madinat-Jumeirah.jpg',
+        highlights: [
+          "Traditional Arabian architecture",
+          "Waterfront dining",
+          "Authentic souvenirs",
+          "Abra boat rides",
+          "Burj Al Arab views"
+        ]
       }
     ]
   },
@@ -237,7 +253,7 @@ export const categories: CategoryType[] = [
     id: 'beaches-islands',
     title: 'Beaches & Islands',
     description: 'Discover Dubai\'s stunning coastline and man-made islands.',
-    icon: '<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>',
+    icon: '<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 0115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>',
     attractions: [
       {
         id: 'dubai-marina',
@@ -494,7 +510,8 @@ export const categories: CategoryType[] = [
           "Safety briefing",
           "Multiple routes"
         ]
-      }
+      },
+     
     ]
   },
   {
@@ -560,29 +577,13 @@ export const categories: CategoryType[] = [
         ]
       },
       {
-        id: 'souk-madinat',
-        name: 'Souk Madinath Jumeirah',
-        description: 'A traditional marketplace with scenic canals and boutique shops.',
-        location: 'Jumeirah',
-        duration: '2-3 hours',
-        category: 'Shopping',
-        image: '/api/placeholder/800/600',
-        highlights: [
-          "Traditional architecture",
-          "Waterway views",
-          "Boutique shopping",
-          "Dining options",
-          "Burj Al Arab views"
-        ]
-      },
-      {
         id: 'hatta-tour',
-        name: 'Hatta Tour',
+        name: 'Hatta Mountain Tour',
         description: 'An escape to the mountains with cultural and adventure activities.',
         location: 'Hatta',
         duration: 'Full Day',
         category: 'Adventure',
-        image: '/api/placeholder/800/600',
+        image: 'https://photosofplaces.netlify.app/images/dubai/Hatta-Dubai.jpg',
         highlights: [
           "Mountain views",
           "Heritage village",
@@ -594,25 +595,25 @@ export const categories: CategoryType[] = [
     ]
   },
   {
-    id: 'wildlife-conservation',
-    title: 'Wildlife & Conservation',
-    description: 'Experience Dubai\'s commitment to wildlife conservation and education.',
+    id: 'wildlife-nature',
+    title: 'Wildlife & Nature',
+    description: 'Discover Dubai\'s amazing wildlife parks and natural attractions.',
     icon: '<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>',
     attractions: [
       {
-        id: 'dubai-safari',
+        id: 'dubai-safari-park',
         name: 'Dubai Safari Park',
-        description: 'A wildlife sanctuary featuring themed zones and interactive animal experiences.',
+        description: 'A state-of-the-art wildlife park home to over 2,500 animals from around the world, featuring different zones representing various climates and ecosystems.',
         location: 'Al Warqa',
         duration: '4-5 hours',
         category: 'Wildlife',
-        image: '/api/placeholder/800/600',
+        image: 'https://photosofplaces.netlify.app/images/dubai/Dubai-Safari-Park.jpg',
         highlights: [
-          "African village",
-          "Asian valley",
-          "Arabian desert safari",
-          "Wildlife shows",
-          "Kids' activities"
+          "Multiple wildlife zones",
+          "Interactive experiences",
+          "Guided tours",
+          "Educational programs",
+          "Conservation efforts"
         ]
       }
     ]

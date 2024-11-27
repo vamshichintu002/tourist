@@ -46,6 +46,21 @@ const dubaiAttractions = {
         category: "Shopping",
         duration: "3-4 hours",
         location: "Al Barsha"
+      },
+      {
+        id: "souk-madinath",
+        name: "Souk Madinat Jumeirah",
+        description: "A traditional Arabian souk within the Madinat Jumeirah complex, offering a unique shopping experience with traditional artifacts, textiles, and souvenirs. Features waterways, restaurants, and stunning Burj Al Arab views.",
+        highlights: [
+          "Traditional Arabian architecture",
+          "Waterfront dining",
+          "Authentic souvenirs",
+          "Abra boat rides",
+          "Burj Al Arab views"
+        ],
+        category: "Shopping",
+        duration: "2-3 hours",
+        location: "Jumeirah"
       }
     ]
   },
@@ -148,6 +163,21 @@ const dubaiAttractions = {
         category: "Adventure",
         duration: "1-2 hours",
         location: "Dubai Marina"
+      },
+      {
+        id: "hatta",
+        name: "Hatta Mountain Tour",
+        description: "Experience the rugged beauty of the Hajar Mountains in Hatta, featuring activities like kayaking in the Hatta Dam, mountain biking, and hiking. Visit the heritage village and enjoy stunning mountain landscapes.",
+        highlights: [
+          "Hatta Dam kayaking",
+          "Mountain biking trails",
+          "Heritage village tour",
+          "Desert driving",
+          "Natural rock pools"
+        ],
+        category: "Adventure",
+        duration: "Full day",
+        location: "Hatta"
       }
     ]
   },
@@ -184,6 +214,27 @@ const dubaiAttractions = {
         category: "Beach",
         duration: "Flexible",
         location: "Jumeirah Beach Residence"
+      }
+    ]
+  },
+
+  wildlifeAndNature: {
+    title: "Wildlife & Nature",
+    attractions: [
+      {
+        id: "safari-park",
+        name: "Dubai Safari Park",
+        description: "A state-of-the-art wildlife park home to over 2,500 animals from around the world. Features different zones representing various climates and ecosystems, with opportunities for close encounters with wildlife.",
+        highlights: [
+          "Multiple wildlife zones",
+          "Interactive experiences",
+          "Guided tours",
+          "Educational programs",
+          "Conservation efforts"
+        ],
+        category: "Wildlife",
+        duration: "4-5 hours",
+        location: "Al Warqa"
       }
     ]
   },
