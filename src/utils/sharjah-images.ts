@@ -1,20 +1,31 @@
 export const attractionImages: Record<string, string> = {
-  // Cultural Heritage
-  'sharjah-museum': 'https://images.unsplash.com/photo-1578895101408-1a36b834405b',
-  'heritage-area': 'https://images.unsplash.com/photo-1583997052103-b4a1cb8c3601',
+  // Cultural & Museums
+  'islamic-civilization-museum': 'https://photosofplaces.netlify.app/images/sharjah/Sharjah-Museum-of-Islamic-Civilization.jpg',
+  'sharjah-art-museum': 'https://photosofplaces.netlify.app/images/sharjah/Sharjah-Art-Museum.jpg',
+  'calligraphy-museum': 'https://photosofplaces.netlify.app/images/sharjah/Sharjah-Calligraphy-Museum.jpg',
+  'science-museum': 'https://photosofplaces.netlify.app/images/sharjah/Sharjah-Science-Museum.jpg',
+  'classic-cars-museum': 'https://photosofplaces.netlify.app/images/sharjah/Sharjah-Classic-Cars-Museum.jpg',
+  'heritage-area': 'https://photosofplaces.netlify.app/images/sharjah/Sharjah-Heritage-Area.jpg',
   
   // Nature & Wildlife
-  'desert-park': 'https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3',
-  'mleiha': 'https://images.unsplash.com/photo-1547234935-80c7145ec969',
+  'mleiha-centre': 'https://photosofplaces.netlify.app/images/sharjah/Mleiha-Archaeological-Centre.jpg',
+  'sharjah-aquarium': 'https://photosofplaces.netlify.app/images/sharjah/Sharjah-Aquarium.jpg',
+  
+  // Beaches & Waterfronts
+  'khor-fakkan-beach': 'https://photosofplaces.netlify.app/images/sharjah/Khor-Fakkan-Beach.jpg',
+  'al-majaz-waterfront': 'https://photosofplaces.netlify.app/images/sharjah/Al-Majaz-Waterfront.jpg',
+  'al-noor-island': 'https://photosofplaces.netlify.app/images/sharjah/Al-Noor-Island.jpg',
   
   // Family Entertainment
-  'al-montazah': 'https://images.unsplash.com/photo-1534008897995-27a23e859048',
-  'al-qasba': 'https://images.unsplash.com/photo-1580237072617-771c3ecc4a24',
+  'al-montazah-parks': 'https://photosofplaces.netlify.app/images/sharjah/Al-Montazah-Parks.jpg',
+  'al-qasba': 'https://photosofplaces.netlify.app/images/sharjah/Al-Qasba.jpg',
   
   // Markets & Shopping
-  'central-souk': 'https://images.unsplash.com/photo-1557501579-cb3f289b14ad',
-  'blue-souk': 'https://images.unsplash.com/photo-1557501579-cb3f289b14ad',
+  'blue-souk': 'https://photosofplaces.netlify.app/images/sharjah/Blue-Souk.jpeg',
+  
+  // Events
+  'light-festival': 'https://photosofplaces.netlify.app/images/sharjah/Sharjah-Light-Festival.jpg',
   
   // Default fallback image
-  'default': 'https://images.unsplash.com/photo-1578895101408-1a36b834405b'
+  'default': 'https://photosofplaces.netlify.app/images/sharjah/Sharjah-Museum-of-Islamic-Civilization.jpg'
 };

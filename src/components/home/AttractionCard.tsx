@@ -1,14 +1,17 @@
 import React from 'react';
 import { MapPin, Clock } from 'lucide-react';
 import { AttractionType } from '../../types/attraction';
-import { attractionImages } from '../../utils/images';
+import { attractionImages as dubaiImages } from '../../utils/images';
+import { attractionImages as sharjahImages } from '../../utils/sharjah-images';
 
 interface AttractionCardProps {
   attraction: AttractionType;
+  city?: 'dubai' | 'sharjah';
 }
 
-export default function AttractionCard({ attraction }: AttractionCardProps) {
-  const imageUrl = attractionImages[attraction.id] || attractionImages.default;
+export default function AttractionCard({ attraction, city = 'dubai' }: AttractionCardProps) {
+  const images = city === 'sharjah' ? sharjahImages : dubaiImages;
+  const imageUrl = images[attraction.id] || images.default;
 
   return (
     <div className="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-lg transition-shadow group">

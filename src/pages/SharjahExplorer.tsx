@@ -32,7 +32,7 @@ function SharjahExplorer() {
       </div>
       <main className="py-12">
         {categories.map((category) => (
-          <CategorySection key={category.id} category={category} />
+          <CategorySection key={category.id} category={category} city="sharjah" />
         ))}
       </main>
     </div>

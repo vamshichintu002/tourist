@@ -186,6 +186,21 @@ const dubaiAttractions = {
     title: "Water & Beach Attractions",
     attractions: [
       {
+        id: "blue-waters",
+        name: "Blue Waters Island",
+        description: "A vibrant island destination featuring the iconic Ain Dubai observation wheel, along with premium retail, dining, and entertainment venues. Offers stunning waterfront views and a modern lifestyle experience.",
+        highlights: [
+          "Ain Dubai observation wheel",
+          "Waterfront dining",
+          "Retail outlets",
+          "Entertainment venues",
+          "Scenic promenade"
+        ],
+        category: "Entertainment",
+        duration: "3-4 hours",
+        location: "Dubai Marina"
+      },
+      {
         id: "aquaventure",
         name: "Aquaventure Waterpark",
         description: "Dubai's premier water park at Atlantis The Palm featuring record-breaking water slides, marine experiences, and private beach access. Includes the famous Leap of Faith slide and shark-filled lagoon experiences.",

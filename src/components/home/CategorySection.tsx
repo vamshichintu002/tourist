@@ -4,9 +4,10 @@ import AttractionCard from './AttractionCard';
 
 interface CategorySectionProps {
   category: CategoryType;
+  city?: 'dubai' | 'sharjah';
 }
 
-export default function CategorySection({ category }: CategorySectionProps) {
+export default function CategorySection({ category, city = 'dubai' }: CategorySectionProps) {
   return (
     <section className="py-12">
       <div className="max-w-7xl mx-auto px-4">
@@ -26,7 +27,7 @@ export default function CategorySection({ category }: CategorySectionProps) {
               data-aos="fade-up"
               data-aos-delay={150 + index * 100}
             >
-              <AttractionCard attraction={attraction} />
+              <AttractionCard attraction={attraction} city={city} />
             </div>
           ))}
         </div>

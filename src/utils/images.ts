@@ -31,7 +31,7 @@ export const attractionImages: Record<string, string> = {
   'dubai-creek': 'https://photosofplaces.netlify.app/images/dubai/Dubai-Creek.jpg',
   'jbr-beach': 'https://photosofplaces.netlify.app/images/dubai/JBR-Beach.jpg',
   'palm-jumeirah': 'https://photosofplaces.netlify.app/images/dubai/Palm-Jumeirah.jpg',
-  'blue-waters': 'https://photosofplaces.netlify.app/images/dubai/Blue-Waters-Island-Dubai.jpg',
+  'bluewaters-island': 'https://photosofplaces.netlify.app/images/dubai/Blue-Waters-Island-Dubai.jpg',
   'the-pointe': 'https://photosofplaces.netlify.app/images/dubai/The-Pointe-Dubai.jpg',
   'palm-monorail': 'https://photosofplaces.netlify.app/images/dubai/Palm-Jumeirah-Monorail.jpg',
   
