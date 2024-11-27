@@ -139,6 +139,24 @@ const Destinations = () => {
       once: true,
       easing: 'ease-out-cubic'
     });
+
+    // Handle hash change for smooth scrolling
+    const handleHashChange = () => {
+      if (window.location.hash === '#destinations') {
+        const element = document.getElementById('destinations');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    // Check hash on initial load
+    handleHashChange();
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
   }, []);
 
   const getVisibleSlides = () => {
@@ -179,7 +197,7 @@ const Destinations = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section id="destinations" className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Why Book With Us Section */}
         <div className="text-center mb-16" data-aos="fade-up">

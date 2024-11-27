@@ -32,7 +32,18 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-6 lg:space-x-10">
             <Link to="#home" className="text-base lg:text-lg text-gray-600 hover:text-[#00B2FF] transition-colors duration-300">Home</Link>
             <Link to="#services" className="text-base lg:text-lg text-gray-600 hover:text-[#00B2FF] transition-colors duration-300">Services</Link>
-            <Link to="#destinations" className="text-base lg:text-lg text-gray-600 hover:text-[#00B2FF] transition-colors duration-300">Destinations</Link>
+            <Link 
+              to="#destinations" 
+              className="text-base lg:text-lg text-gray-600 hover:text-[#00B2FF] transition-colors duration-300"
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.getElementById('destinations');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                  window.location.hash = 'destinations';
+                }
+              }}
+            >Destinations</Link>
             <Link to="#tour-packages" className="text-base lg:text-lg text-gray-600 hover:text-[#00B2FF] transition-colors duration-300">Tour Packages</Link>
             <button
               onClick={toggleContactPopup}
@@ -66,9 +77,18 @@ export default function Navbar() {
               className="block py-2 text-base text-gray-600 hover:text-[#00B2FF] transition-colors duration-300"
               onClick={() => setIsOpen(false)}
             >Services</Link>
-            <Link to="#destinations" 
+            <Link 
+              to="#destinations" 
               className="block py-2 text-base text-gray-600 hover:text-[#00B2FF] transition-colors duration-300"
-              onClick={() => setIsOpen(false)}
+              onClick={(e) => {
+                e.preventDefault();
+                setIsOpen(false);
+                const element = document.getElementById('destinations');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                  window.location.hash = 'destinations';
+                }
+              }}
             >Destinations</Link>
             <Link to="#tour-packages" 
               className="block py-2 text-base text-gray-600 hover:text-[#00B2FF] transition-colors duration-300"
