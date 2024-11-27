@@ -1,5 +1,5 @@
 import { type FC, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Navbar from './components/Navbar';
@@ -28,6 +28,21 @@ const Home: FC = () => {
   );
 };
 
+const ScrollToHashElement = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.slice(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
+  return null;
+};
+
 const App: FC = () => {
   useEffect(() => {
     const handleScroll = () => {
@@ -52,6 +67,7 @@ const App: FC = () => {
   return (
     <Router>
       <ScrollToTop />
+      <ScrollToHashElement />
       <div className="min-h-screen">
         <Navbar />
         <main>

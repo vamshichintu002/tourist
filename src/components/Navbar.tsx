@@ -1,5 +1,6 @@
 import React from 'react';
 import { Menu, X, Phone, Instagram, Facebook, Globe } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -15,19 +16,20 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           <div className="flex items-center">
-            <img 
-              src="/logo.png" 
-              alt="Company Logo" 
-              className="h-16 w-auto object-contain hover:scale-105 transition-transform duration-300"
-            />
+            <Link to="/">
+              <img 
+                src="/logo.png" 
+                alt="Company Logo" 
+                className="h-16 w-auto object-contain hover:scale-105 transition-transform duration-300"
+              />
+            </Link>
           </div>
           
           <div className="hidden md:flex items-center space-x-10">
-            <a href="#home" className="text-lg text-gray-600 hover:text-[#00B2FF]">Home</a>
-            <a href="#about" className="text-lg text-gray-600 hover:text-[#00B2FF]">About</a>
-            <a href="#services" className="text-lg text-gray-600 hover:text-[#00B2FF]">Services</a>
-            <a href="#destinations" className="text-lg text-gray-600 hover:text-[#00B2FF]">Destinations</a>
-            <a href="#blog" className="text-lg text-gray-600 hover:text-[#00B2FF]">Blog</a>
+            <Link to="#home" className="text-lg text-gray-600 hover:text-[#00B2FF]">Home</Link>
+            <Link to="#services" className="text-lg text-gray-600 hover:text-[#00B2FF]">Services</Link>
+            <Link to="#destinations" className="text-lg text-gray-600 hover:text-[#00B2FF]">Destinations</Link>
+            <Link to="#tour-packages" className="text-lg text-gray-600 hover:text-[#00B2FF]">Tour Packages</Link>
             <button
               onClick={toggleContactPopup}
               className="bg-gradient-to-r from-[#00B2FF] via-[#00E0C6] to-[#4ADE80] 
@@ -52,11 +54,10 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="#home" className="block px-3 py-2 text-lg text-gray-600 hover:text-[#00B2FF]">Home</a>
-            <a href="#about" className="block px-3 py-2 text-lg text-gray-600 hover:text-[#00B2FF]">About</a>
-            <a href="#services" className="block px-3 py-2 text-lg text-gray-600 hover:text-[#00B2FF]">Services</a>
-            <a href="#destinations" className="block px-3 py-2 text-lg text-gray-600 hover:text-[#00B2FF]">Destinations</a>
-            <a href="#blog" className="block px-3 py-2 text-lg text-gray-600 hover:text-[#00B2FF]">Blog</a>
+            <Link to="#home" className="block px-3 py-2 text-lg text-gray-600 hover:text-[#00B2FF]">Home</Link>
+            <Link to="#services" className="block px-3 py-2 text-lg text-gray-600 hover:text-[#00B2FF]">Services</Link>
+            <Link to="#destinations" className="block px-3 py-2 text-lg text-gray-600 hover:text-[#00B2FF]">Destinations</Link>
+            <Link to="#tour-packages" className="block px-3 py-2 text-lg text-gray-600 hover:text-[#00B2FF]">Tour Packages</Link>
             <button
               onClick={toggleContactPopup}
               className="w-full text-left px-3 py-2 text-lg text-[#00B2FF] font-medium"
@@ -92,7 +93,7 @@ export default function Navbar() {
               </a>
               
               <a 
-                href="https://www.instagram.com/cityview__tourism?igsh=MWhqbjk5YXlmdWdiMA==" 
+                href="https://www.instagram.com/cityview__tourism?igshid=MWhqbjk5YXlmdWdiMA==" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-4 text-gray-600 hover:text-[#E1306C] transition-colors p-3 rounded-lg hover:bg-gray-50"

@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '../components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 import { Calendar, MapPin, Clock, Coffee, Car, Star } from 'lucide-react';
 import { cn } from '../lib/utils';
 import Timeline from './Timeline';
 import ImageCard from './ImageCard';
+import { Link, useLocation } from 'react-router-dom';
 
 const tourImages = {
   "Dhow Cruise with Dinner at Dubai Canal": 'https://photosofplaces.netlify.app/images/dubai/Dhow-Cruise-With-Dinner.jpg',
@@ -12,8 +13,8 @@ const tourImages = {
   "Desert Safari with BBQ Dinner": 'https://photosofplaces.netlify.app/images/dubai/Desert-Safari-With-BBQ-Dinner.jpg',
   "Abu Dhabi City Tour": 'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?auto=format&fit=crop&q=80',
   "Dubai City Tour": 'https://photosofplaces.netlify.app/images/dubai/Dubai-Frame.jpg',
-  "Full Day Dubai City Tour": 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&q=80',
-  "Miracle Garden & Global Village Visit": 'https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?auto=format&fit=crop&q=80',
+  "Full Day Dubai City Tour": 'https://images.pexels.com/photos/325193/pexels-photo-325193.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+  "Miracle Garden & Global Village Visit": 'https://photosofplaces.netlify.app/images/dubai/Global-Village-Dubai.jpg?auto=format&fit=crop&q=80',
 };
 
 const inclusionImages = {
@@ -187,8 +188,31 @@ const packages = [
 ];
 
 const TourPackage = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Check if there's a hash in the URL
+    if (location.hash) {
+      // Remove the # from the hash
+      const element = document.getElementById(location.hash.slice(1));
+      if (element) {
+        // Wait a bit for the page to render completely
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location]);
+
+  const handleSectionClick = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className="max-w-6xl mx-auto p-6 bg-background min-h-screen">
+    <div id="tour-packages" className="max-w-6xl mx-auto p-6 bg-background min-h-screen">
       <div className="text-center space-y-4 mb-12">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
           Dubai Tour Packages
@@ -224,21 +248,29 @@ const TourPackage = () => {
                 </CardHeader>
                 <CardContent className="p-6">
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    {pkg.highlights.map((highlight, index) => (
-                      <ImageCard 
-                        key={highlight}
-                        src={tourImages[highlight] || tourImages["Dubai City Tour"]}
-                        title={highlight}
-                        className="aspect-[3/2] animate-slideUp"
-                        style={{ animationDelay: `${index * 100}ms` }}
-                      />
-                    ))}
+                    {pkg.highlights.map((highlight, index) => {
+                      const sectionId = getSectionId(highlight);
+                      return (
+                        <div 
+                          key={highlight}
+                          onClick={() => handleSectionClick(sectionId)}
+                          className="cursor-pointer block hover:scale-105 transition-transform duration-300"
+                        >
+                          <ImageCard 
+                            src={tourImages[highlight] || tourImages["Dubai City Tour"]}
+                            title={highlight}
+                            className="aspect-[3/2] animate-slideUp"
+                            style={{ animationDelay: `${index * 100}ms` }}
+                          />
+                        </div>
+                      );
+                    })}
                   </div>
                 </CardContent>
               </Card>
 
               {/* Detailed Itinerary */}
-              <Card className="overflow-hidden border-none shadow-lg">
+              <Card id="itinerary-section" className="overflow-hidden border-none shadow-lg scroll-mt-20">
                 <CardHeader className="bg-gradient-to-r from-primary to-secondary text-primary-foreground">
                   <CardTitle className="flex items-center gap-2">
                     <Calendar className="h-5 w-5" />
@@ -251,7 +283,7 @@ const TourPackage = () => {
               </Card>
 
               {/* Package Inclusions */}
-              <Card className="overflow-hidden border-none shadow-lg">
+              <Card id="inclusions-section" className="overflow-hidden border-none shadow-lg scroll-mt-20">
                 <CardHeader className="bg-gradient-to-r from-primary to-secondary text-primary-foreground">
                   <CardTitle className="flex items-center gap-2">
                     <Coffee className="h-5 w-5" />
@@ -273,12 +305,25 @@ const TourPackage = () => {
                   </div>
                 </CardContent>
               </Card>
+
             </div>
           </TabsContent>
         ))}
       </Tabs>
     </div>
   );
+};
+
+// Helper function to get section IDs
+const getSectionId = (highlight: string): string => {
+  const sectionMap: { [key: string]: string } = {
+    "Dubai Mall & Burj Khalifa Visit": "burj-khalifa-section",
+    "Desert Safari with BBQ Dinner": "desert-safari-section",
+    "Dhow Cruise with Dinner at Dubai Canal": "dhow-cruise-section",
+    "Itinerary": "itinerary-section",
+    "Inclusions": "inclusions-section"
+  };
+  return sectionMap[highlight] || "tour-packages";
 };
 
 export default TourPackage;

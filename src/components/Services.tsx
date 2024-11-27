@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Car, Hotel, Compass, Plane, Ticket, Passport } from 'lucide-react';
 
 const services = [
@@ -35,6 +35,26 @@ const services = [
 ];
 
 export default function Services() {
+  useEffect(() => {
+    const handleHashChange = () => {
+      if (window.location.hash === '#services') {
+        const element = document.getElementById('services');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+
+    // Check hash on initial load
+    handleHashChange();
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
+
   return (
     <section id="services" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
