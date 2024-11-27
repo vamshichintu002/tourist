@@ -11,30 +11,34 @@ export default function Navbar() {
     setShowContactPopup(!showContactPopup);
   };
 
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav className="bg-white shadow-lg fixed w-full z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20">
+      <div className="max-w-[2000px] mx-auto px-4 md:px-8 lg:px-12">
+        <div className="flex justify-between h-14 md:h-16 lg:h-20">
           <div className="flex items-center">
             <Link to="/">
               <img 
                 src="/logo.png" 
                 alt="Company Logo" 
-                className="h-16 w-auto object-contain hover:scale-105 transition-transform duration-300"
+                className="h-10 w-auto md:h-12 lg:h-16 object-contain hover:scale-105 transition-transform duration-300"
               />
             </Link>
           </div>
           
-          <div className="hidden md:flex items-center space-x-10">
-            <Link to="#home" className="text-lg text-gray-600 hover:text-[#00B2FF]">Home</Link>
-            <Link to="#services" className="text-lg text-gray-600 hover:text-[#00B2FF]">Services</Link>
-            <Link to="#destinations" className="text-lg text-gray-600 hover:text-[#00B2FF]">Destinations</Link>
-            <Link to="#tour-packages" className="text-lg text-gray-600 hover:text-[#00B2FF]">Tour Packages</Link>
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-10">
+            <Link to="#home" className="text-base lg:text-lg text-gray-600 hover:text-[#00B2FF] transition-colors duration-300">Home</Link>
+            <Link to="#services" className="text-base lg:text-lg text-gray-600 hover:text-[#00B2FF] transition-colors duration-300">Services</Link>
+            <Link to="#destinations" className="text-base lg:text-lg text-gray-600 hover:text-[#00B2FF] transition-colors duration-300">Destinations</Link>
+            <Link to="#tour-packages" className="text-base lg:text-lg text-gray-600 hover:text-[#00B2FF] transition-colors duration-300">Tour Packages</Link>
             <button
               onClick={toggleContactPopup}
               className="bg-gradient-to-r from-[#00B2FF] via-[#00E0C6] to-[#4ADE80] 
-                       text-white px-6 py-3 rounded-md hover:shadow-lg 
-                       hover:scale-105 transform transition-all duration-300 text-lg"
+                       text-white px-4 py-2 md:px-5 md:py-2.5 lg:px-6 lg:py-3 rounded-md hover:shadow-lg 
+                       hover:scale-105 transform transition-all duration-300 text-sm lg:text-base"
             >
               Contact Us
             </button>
@@ -42,25 +46,40 @@ export default function Navbar() {
 
           <div className="md:hidden flex items-center">
             <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-600 hover:text-[#00B2FF] focus:outline-none"
+              onClick={toggleMenu}
+              className="text-gray-600 hover:text-[#00B2FF] focus:outline-none p-2"
             >
-              {isOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
+              {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
           </div>
         </div>
       </div>
 
       {isOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link to="#home" className="block px-3 py-2 text-lg text-gray-600 hover:text-[#00B2FF]">Home</Link>
-            <Link to="#services" className="block px-3 py-2 text-lg text-gray-600 hover:text-[#00B2FF]">Services</Link>
-            <Link to="#destinations" className="block px-3 py-2 text-lg text-gray-600 hover:text-[#00B2FF]">Destinations</Link>
-            <Link to="#tour-packages" className="block px-3 py-2 text-lg text-gray-600 hover:text-[#00B2FF]">Tour Packages</Link>
+        <div className="md:hidden w-full bg-white border-t">
+          <div className="px-4 py-2 space-y-2">
+            <Link to="#home" 
+              className="block py-2 text-base text-gray-600 hover:text-[#00B2FF] transition-colors duration-300"
+              onClick={() => setIsOpen(false)}
+            >Home</Link>
+            <Link to="#services" 
+              className="block py-2 text-base text-gray-600 hover:text-[#00B2FF] transition-colors duration-300"
+              onClick={() => setIsOpen(false)}
+            >Services</Link>
+            <Link to="#destinations" 
+              className="block py-2 text-base text-gray-600 hover:text-[#00B2FF] transition-colors duration-300"
+              onClick={() => setIsOpen(false)}
+            >Destinations</Link>
+            <Link to="#tour-packages" 
+              className="block py-2 text-base text-gray-600 hover:text-[#00B2FF] transition-colors duration-300"
+              onClick={() => setIsOpen(false)}
+            >Tour Packages</Link>
             <button
-              onClick={toggleContactPopup}
-              className="w-full text-left px-3 py-2 text-lg text-[#00B2FF] font-medium"
+              onClick={(e) => {
+                toggleContactPopup(e);
+                setIsOpen(false);
+              }}
+              className="w-full text-left py-2 text-base text-[#00B2FF] font-medium hover:bg-gray-50 transition-colors duration-300"
             >
               Contact Us
             </button>
@@ -68,18 +87,17 @@ export default function Navbar() {
         </div>
       )}
 
-      {/* Contact Popup */}
       {showContactPopup && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg p-8 max-w-md w-full mx-4 relative animate-fadeIn">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 px-4">
+          <div className="bg-white rounded-lg p-6 lg:p-8 max-w-[95%] w-full sm:max-w-md mx-auto relative animate-fadeIn">
             <button
               onClick={toggleContactPopup}
-              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 transition-colors duration-300"
             >
               <X className="h-6 w-6" />
             </button>
             
-            <h2 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-[#00B2FF] via-[#00E0C6] to-[#4ADE80] text-transparent bg-clip-text">
+            <h2 className="text-2xl lg:text-3xl font-bold mb-6 text-center bg-gradient-to-r from-[#00B2FF] via-[#00E0C6] to-[#4ADE80] text-transparent bg-clip-text">
               Contact Information
             </h2>
             

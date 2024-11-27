@@ -68,7 +68,7 @@ const App: FC = () => {
     <Router>
       <ScrollToTop />
       <ScrollToHashElement />
-      <div className="min-h-screen">
+      <div className="min-h-screen overflow-x-hidden">
         <Navbar />
         <main>
           <Routes>

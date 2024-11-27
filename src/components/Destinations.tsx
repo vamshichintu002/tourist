@@ -74,11 +74,7 @@ const trendingExcursions = [
     location: 'Abu Dhabi - United Arab Emirates',
     image: 'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
   },
-  {
-    title: 'Dubai Global Village Experience',
-    location: 'Dubai - United Arab Emirates',
-    image: 'https://images.unsplash.com/photo-1576001759935-0436d2e962fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-  }
+
 ];
 
 const adventureActivities = [
@@ -103,11 +99,7 @@ const adventureActivities = [
     location: 'Dubai - United Arab Emirates',
     image: 'https://photosofplaces.netlify.app/images/dubai/XLine-Dubai-Marina.jpg?auto=format&fit=crop&w=1740&q=80',
   },
-  {
-    title: 'Desert Quad Biking',
-    location: 'Dubai - United Arab Emirates',
-    image: 'https://images.unsplash.com/photo-1626264146552-c589ce6a6cc5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-  }
+ 
 ];
 
 const ExcursionCard = ({ title, location, image, link }) => {
