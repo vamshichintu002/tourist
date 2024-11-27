@@ -3,14 +3,26 @@ import { MapPin, Clock } from 'lucide-react';
 import { AttractionType } from '../../types/attraction';
 import { attractionImages as dubaiImages } from '../../utils/images';
 import { attractionImages as sharjahImages } from '../../utils/sharjah-images';
+import { attractionImages as abuDhabiImages } from '../../utils/abu-dhabi-images';
 
 interface AttractionCardProps {
   attraction: AttractionType;
-  city?: 'dubai' | 'sharjah';
+  city?: 'dubai' | 'sharjah' | 'abu-dhabi';
 }
 
 export default function AttractionCard({ attraction, city = 'dubai' }: AttractionCardProps) {
-  const images = city === 'sharjah' ? sharjahImages : dubaiImages;
+  const getImages = () => {
+    switch (city) {
+      case 'abu-dhabi':
+        return abuDhabiImages;
+      case 'sharjah':
+        return sharjahImages;
+      default:
+        return dubaiImages;
+    }
+  };
+  
+  const images = getImages();
   const imageUrl = images[attraction.id] || images.default;
 
   return (

@@ -7,11 +7,11 @@ import Timeline from './Timeline';
 import ImageCard from './ImageCard';
 
 const tourImages = {
-  "Dhow Cruise with Dinner at Dubai Canal": 'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?auto=format&fit=crop&q=80',
-  "Dubai Mall & Burj Khalifa Visit": 'https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?auto=format&fit=crop&q=80',
-  "Desert Safari with BBQ Dinner": 'https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?auto=format&fit=crop&q=80',
+  "Dhow Cruise with Dinner at Dubai Canal": 'https://photosofplaces.netlify.app/images/dubai/Dhow-Cruise-With-Dinner.jpg',
+  "Dubai Mall & Burj Khalifa Visit": 'https://photosofplaces.netlify.app/images/dubai/Burj-Khalifa.jpg',
+  "Desert Safari with BBQ Dinner": 'https://photosofplaces.netlify.app/images/dubai/Desert-Safari-With-BBQ-Dinner.jpg',
   "Abu Dhabi City Tour": 'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?auto=format&fit=crop&q=80',
-  "Dubai City Tour": 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&q=80',
+  "Dubai City Tour": 'https://photosofplaces.netlify.app/images/dubai/Dubai-Frame.jpg',
   "Full Day Dubai City Tour": 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&q=80',
   "Miracle Garden & Global Village Visit": 'https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?auto=format&fit=crop&q=80',
 };

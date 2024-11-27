@@ -4,7 +4,7 @@ import AttractionCard from './AttractionCard';
 
 interface CategorySectionProps {
   category: CategoryType;
-  city?: 'dubai' | 'sharjah';
+  city?: 'dubai' | 'sharjah' | 'abu-dhabi';
 }
 
 export default function CategorySection({ category, city = 'dubai' }: CategorySectionProps) {

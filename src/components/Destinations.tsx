@@ -57,17 +57,17 @@ const trendingExcursions = [
   {
     title: 'Desert Safari',
     location: 'Dubai - United Arab Emirates',
-    image: 'https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+    image: 'https://photosofplaces.netlify.app/images/dubai/Dubai-Safari-Park.jpg?auto=format&fit=crop&w=800&q=80',
   },
   {
     title: 'Dolphin Show At The Dubai Creek Park',
     location: 'Dubai - United Arab Emirates',
-    image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+    image: 'https://photosofplaces.netlify.app/images/dubai/Dubai-Dolphinarium.jpg?auto=format&fit=crop&w=800&q=80',
   },
   {
     title: 'Dubai Marina Yacht Tour',
     location: 'Dubai Marina - United Arab Emirates',
-    image: 'https://images.unsplash.com/photo-1585813271600-a5a7e4f1d0fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+    image: 'https://photosofplaces.netlify.app/images/dubai/Dubai-Marina.jpg?auto=format&fit=crop&w=1740&q=80',
   },
   {
     title: 'Sheikh Zayed Grand Mosque Visit',
@@ -82,30 +82,26 @@ const trendingExcursions = [
 ];
 
 const adventureActivities = [
-  {
-    title: 'Desert Safari',
-    location: 'Dubai - United Arab Emirates',
-    image: 'https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-  },
+ 
   {
     title: 'Dubai Safari Park',
     location: 'Dubai - United Arab Emirates',
-    image: 'https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+    image: 'https://photosofplaces.netlify.app/images/dubai/Dubai-Safari-Park.jpg?auto=format&fit=crop&w=800&q=80',
   },
   {
     title: 'Hot Air Balloon',
     location: 'Dubai - United Arab Emirates',
-    image: 'https://images.unsplash.com/photo-1507666664345-c49223375e33?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+    image: 'https://photosofplaces.netlify.app/images/dubai/Hot-Air-Balloon-Dubai.jpg?auto=format&fit=crop&w=800&q=80',
   },
   {
     title: 'Skydiving Over Palm Jumeirah',
     location: 'Dubai - United Arab Emirates',
-    image: 'https://images.unsplash.com/photo-1521673461164-de300ebcfb17?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+    image: 'https://photosofplaces.netlify.app/images/dubai/SkyDive-Dubai.jpg?auto=format&fit=crop&w=1740&q=80',
   },
   {
     title: 'Zip Line Dubai Marina',
     location: 'Dubai - United Arab Emirates',
-    image: 'https://images.unsplash.com/photo-1622293088055-93fca56dd19a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+    image: 'https://photosofplaces.netlify.app/images/dubai/XLine-Dubai-Marina.jpg?auto=format&fit=crop&w=1740&q=80',
   },
   {
     title: 'Desert Quad Biking',
