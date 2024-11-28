@@ -55,9 +55,9 @@ const trendingExcursions = [
     image: 'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
   },
   {
-    title: 'Desert Safari',
+    title: 'Dubai Safari Park',
     location: 'Dubai - United Arab Emirates',
-    image: 'https://photosofplaces.netlify.app/images/main-page/Dubai-Safari.jpg?auto=format&fit=crop&w=800&q=80',
+    image: 'https://photosofplaces.netlify.app/images/dubai/Dubai-Safari-Park.jpg?auto=format&fit=crop&w=800&q=80',
   },
   {
     title: 'Dolphin Show At The Dubai Creek Park',
@@ -72,17 +72,18 @@ const trendingExcursions = [
   {
     title: 'Sheikh Zayed Grand Mosque Visit',
     location: 'Abu Dhabi - United Arab Emirates',
-    image: 'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+    image: 'https://photosofplaces.netlify.app/images/abu-dhabi/Sheikh-Zayed-Grand-Mosque.jpg?auto=format&fit=crop&w=1740&q=80',
   },
 
 ];
 
 const adventureActivities = [
  
+ 
   {
-    title: 'Dubai Safari Park',
+    title: 'Desert Safari',
     location: 'Dubai - United Arab Emirates',
-    image: 'https://photosofplaces.netlify.app/images/dubai/Dubai-Safari-Park.jpg?auto=format&fit=crop&w=800&q=80',
+    image: 'https://photosofplaces.netlify.app/images/main-page/Dubai-Safari.jpg?auto=format&fit=crop&w=800&q=80',
   },
   {
     title: 'Hot Air Balloon',
