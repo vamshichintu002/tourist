@@ -57,7 +57,7 @@ const trendingExcursions = [
   {
     title: 'Desert Safari',
     location: 'Dubai - United Arab Emirates',
-    image: 'https://photosofplaces.netlify.app/images/dubai/Dubai-Safari-Park.jpg?auto=format&fit=crop&w=800&q=80',
+    image: 'https://photosofplaces.netlify.app/images/main-page/Dubai-Safari.jpg?auto=format&fit=crop&w=800&q=80',
   },
   {
     title: 'Dolphin Show At The Dubai Creek Park',

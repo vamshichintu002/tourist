@@ -212,23 +212,23 @@ const TourPackage = () => {
   };
 
   return (
-    <div id="tour-packages" className="max-w-6xl mx-auto p-6 bg-background min-h-screen">
-      <div className="text-center space-y-4 mb-12">
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+    <div id="tour-packages" className="max-w-6xl mx-auto px-4 sm:px-6 bg-background min-h-screen">
+      <div className="text-center space-y-4 mb-8 sm:mb-12">
+        <h1 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
           Dubai Tour Packages
         </h1>
-        <p className="text-muted-foreground max-w-2xl mx-auto">
+        <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base">
           Experience the magic of Dubai with our carefully curated tour packages
         </p>
       </div>
       
       <Tabs defaultValue="dt43" className="w-full">
-        <TabsList className="flex justify-center mb-8 bg-card p-1 rounded-lg shadow-sm">
+        <TabsList className="flex flex-col sm:flex-row justify-center mb-8 bg-card p-1 rounded-lg shadow-sm w-full sm:w-auto">
           {packages.map(pkg => (
             <TabsTrigger 
               key={pkg.id} 
               value={pkg.id} 
-              className="px-6 py-3 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all"
+              className="px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all w-full sm:w-auto"
             >
               {pkg.title}
             </TabsTrigger>
@@ -237,17 +237,17 @@ const TourPackage = () => {
 
         {packages.map(pkg => (
           <TabsContent key={pkg.id} value={pkg.id}>
-            <div className="grid gap-8">
+            <div className="grid gap-6 sm:gap-8">
               {/* Tour Highlights */}
               <Card className="overflow-hidden border-none shadow-lg">
-                <CardHeader className="bg-gradient-to-r from-primary to-secondary text-primary-foreground">
-                  <CardTitle className="flex items-center gap-2">
+                <CardHeader className="bg-gradient-to-r from-primary to-secondary text-primary-foreground p-4 sm:p-6">
+                  <CardTitle className="flex items-center gap-2 text-lg sm:text-xl">
                     <Star className="h-5 w-5" />
                     Tour Highlights
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-6">
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <CardContent className="p-4 sm:p-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {pkg.highlights.map((highlight, index) => {
                       const sectionId = getSectionId(highlight);
                       return (
@@ -271,27 +271,27 @@ const TourPackage = () => {
 
               {/* Detailed Itinerary */}
               <Card id="itinerary-section" className="overflow-hidden border-none shadow-lg scroll-mt-20">
-                <CardHeader className="bg-gradient-to-r from-primary to-secondary text-primary-foreground">
-                  <CardTitle className="flex items-center gap-2">
+                <CardHeader className="bg-gradient-to-r from-primary to-secondary text-primary-foreground p-4 sm:p-6">
+                  <CardTitle className="flex items-center gap-2 text-lg sm:text-xl">
                     <Calendar className="h-5 w-5" />
                     Detailed Itinerary
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-6">
+                <CardContent className="p-4 sm:p-6">
                   <Timeline dayPlans={pkg.dayPlans} />
                 </CardContent>
               </Card>
 
               {/* Package Inclusions */}
               <Card id="inclusions-section" className="overflow-hidden border-none shadow-lg scroll-mt-20">
-                <CardHeader className="bg-gradient-to-r from-primary to-secondary text-primary-foreground">
-                  <CardTitle className="flex items-center gap-2">
+                <CardHeader className="bg-gradient-to-r from-primary to-secondary text-primary-foreground p-4 sm:p-6">
+                  <CardTitle className="flex items-center gap-2 text-lg sm:text-xl">
                     <Coffee className="h-5 w-5" />
                     Package Inclusions
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-6">
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <CardContent className="p-4 sm:p-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {pkg.inclusions && pkg.inclusions.map((inclusion, index) => (
                       <ImageCard 
                         key={inclusion.title}
