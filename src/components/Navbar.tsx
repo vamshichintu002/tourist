@@ -30,8 +30,19 @@ export default function Navbar() {
           </div>
           
           <div className="hidden md:flex items-center space-x-6 lg:space-x-10">
-            <Link to="#home" className="text-base lg:text-lg text-gray-600 hover:text-[#00B2FF] transition-colors duration-300">Home</Link>
-            <Link to="#services" className="text-base lg:text-lg text-gray-600 hover:text-[#00B2FF] transition-colors duration-300">Services</Link>
+            <Link to="/">Home</Link>
+            <Link 
+              to="#services" 
+              className="text-base lg:text-lg text-gray-600 hover:text-[#00B2FF] transition-colors duration-300"
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.getElementById('services');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                  window.location.hash = 'services';
+                }
+              }}
+            >Services</Link>
             <Link 
               to="#destinations" 
               className="text-base lg:text-lg text-gray-600 hover:text-[#00B2FF] transition-colors duration-300"
@@ -69,13 +80,22 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden w-full bg-white border-t">
           <div className="px-4 py-2 space-y-2">
-            <Link to="#home" 
+            <Link to="/" 
               className="block py-2 text-base text-gray-600 hover:text-[#00B2FF] transition-colors duration-300"
               onClick={() => setIsOpen(false)}
             >Home</Link>
-            <Link to="#services" 
+            <Link 
+              to="#services" 
               className="block py-2 text-base text-gray-600 hover:text-[#00B2FF] transition-colors duration-300"
-              onClick={() => setIsOpen(false)}
+              onClick={(e) => {
+                e.preventDefault();
+                setIsOpen(false);
+                const element = document.getElementById('services');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                  window.location.hash = 'services';
+                }
+              }}
             >Services</Link>
             <Link 
               to="#destinations" 

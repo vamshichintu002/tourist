@@ -83,6 +83,7 @@ export default function Hero({ city }: { city: 'dubai' | 'abu-dhabi' | 'sharjah'
             setSearchResults([]);
             setSearchQuery('');
           }} 
+          city={city}
         />
       )}
     </>

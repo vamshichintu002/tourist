@@ -14,7 +14,7 @@ export const categories: CategoryType[] = [
         location: 'Sheikh Rashid Bin Saeed Street',
         duration: '2-3 hours',
         category: 'Religious Site',
-        image: '/api/placeholder/800/600',
+        image: 'https://photosofplaces.netlify.app/images/abu-dhabi/Sheikh-Zayed-Grand-Mosque.jpg',
         highlights: [
           "82 white marble domes",
           "World's largest hand-knotted carpet",
@@ -30,7 +30,7 @@ export const categories: CategoryType[] = [
         location: 'Abu Mureikhah',
         duration: '1-2 hours',
         category: 'Religious Site',
-        image: '/api/placeholder/800/600',
+        image: 'https://photosofplaces.netlify.app/images/abu-dhabi/BAPS-Hindu-Temple.jpg',
         highlights: [
           "Traditional architecture",
           "Cultural ceremonies",
@@ -46,7 +46,7 @@ export const categories: CategoryType[] = [
         location: 'Al Ras Al Akhdar',
         duration: '2-3 hours',
         category: 'Palace',
-        image: '/api/placeholder/800/600',
+        image: 'https://photosofplaces.netlify.app/images/abu-dhabi/Qasr-Al-Watan.jpg',
         highlights: [
           "Presidential palace tours",
           "Arabian architecture",
@@ -109,7 +109,15 @@ export const categories: CategoryType[] = [
         description: 'The world\'s first Ferrari-branded theme park with thrilling rides.',
         location: 'Yas Island',
         duration: '4-6 hours',
-        category: 'Theme Park'
+        category: 'Theme Park',
+        image: '/api/placeholder/800/600',
+        highlights: [
+          "Record-breaking roller coasters",
+          "Ferrari-themed attractions",
+          "Family-friendly activities",
+          "Dining and shopping options",
+          "Annual events and festivals"
+        ]
       },
       {
         id: 'warner-bros-world',
@@ -117,7 +125,15 @@ export const categories: CategoryType[] = [
         description: 'An immersive indoor theme park with Warner Bros. characters.',
         location: 'Yas Island',
         duration: '4-6 hours',
-        category: 'Theme Park'
+        category: 'Theme Park',
+        image: '/api/placeholder/800/600',
+        highlights: [
+          "Immersive themed environments",
+          "Thrilling rides and attractions",
+          "Family-friendly activities",
+          "Dining and shopping options",
+          "Character meet-and-greets"
+        ]
       },
       {
         id: 'yas-waterworld',
@@ -125,7 +141,15 @@ export const categories: CategoryType[] = [
         description: 'A unique water park with Emirati culture-themed attractions.',
         location: 'Yas Island',
         duration: '4-6 hours',
-        category: 'Water Park'
+        category: 'Water Park',
+        image: '/api/placeholder/800/600',
+        highlights: [
+          "Emirati culture-themed attractions",
+          "Thrilling water slides",
+          "Family-friendly activities",
+          "Dining and shopping options",
+          "Relaxation areas"
+        ]
       }
     ]
   },
@@ -141,7 +165,15 @@ export const categories: CategoryType[] = [
         description: 'A picturesque waterfront promenade with stunning views.',
         location: 'Corniche Road',
         duration: '2-3 hours',
-        category: 'Waterfront'
+        category: 'Waterfront',
+        image: '/api/placeholder/800/600',
+        highlights: [
+          "Stunning waterfront views",
+          "Parks and gardens",
+          "Walking and cycling paths",
+          "Dining and shopping options",
+          "Beach access"
+        ]
       },
       {
         id: 'yas-island',
@@ -149,7 +181,15 @@ export const categories: CategoryType[] = [
         description: 'A premier entertainment destination with world-class attractions.',
         location: 'Yas Island',
         duration: 'Full day',
-        category: 'Island'
+        category: 'Island',
+        image: '/api/placeholder/800/600',
+        highlights: [
+          "World-class attractions",
+          "Thrilling rides and activities",
+          "Dining and shopping options",
+          "Relaxation areas",
+          "Beach access"
+        ]
       },
       {
         id: 'saadiyat-island',
@@ -157,7 +197,15 @@ export const categories: CategoryType[] = [
         description: 'A cultural and luxury destination with pristine beaches.',
         location: 'Saadiyat Island',
         duration: 'Full day',
-        category: 'Island'
+        category: 'Island',
+        image: '/api/placeholder/800/600',
+        highlights: [
+          "Pristine beaches",
+          "Luxury resorts and hotels",
+          "Cultural attractions",
+          "Dining and shopping options",
+          "Relaxation areas"
+        ]
       },
       {
         id: 'sir-bani-yas-island',
@@ -165,7 +213,15 @@ export const categories: CategoryType[] = [
         description: 'A natural island with wildlife encounters and eco-resorts.',
         location: 'Western Region',
         duration: '1-2 days',
-        category: 'Island'
+        category: 'Island',
+        image: '/api/placeholder/800/600',
+        highlights: [
+          "Wildlife encounters",
+          "Eco-resorts and hotels",
+          "Nature reserves",
+          "Dining and shopping options",
+          "Relaxation areas"
+        ]
       }
     ]
   }

@@ -5,9 +5,10 @@ import AttractionCard from './AttractionCard';
 interface SearchResultsProps {
   results: AttractionType[];
   onClose: () => void;
+  city: 'dubai' | 'sharjah' | 'abu-dhabi';
 }
 
-export default function SearchResults({ results, onClose }: SearchResultsProps) {
+export default function SearchResults({ results, onClose, city }: SearchResultsProps) {
   if (results.length === 0) return null;
 
   return (
@@ -31,7 +32,11 @@ export default function SearchResults({ results, onClose }: SearchResultsProps) 
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {results.map((attraction) => (
-                <AttractionCard key={attraction.id} attraction={attraction} />
+                <AttractionCard 
+                  key={attraction.id} 
+                  attraction={attraction} 
+                  city={city}
+                />
               ))}
             </div>
           </div>

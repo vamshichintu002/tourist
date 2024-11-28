@@ -14,7 +14,7 @@ export const categories: CategoryType[] = [
         location: 'Khor Fakkan',
         duration: '3-4 hours',
         category: 'Beach',
-        image: '/api/placeholder/800/600',
+        image: 'https://photosofplaces.netlify.app/images/sharjah/Khor-Fakkan-Beach.jpg',
         highlights: [
           "Pristine sandy beach",
           "Water sports activities",
@@ -30,7 +30,7 @@ export const categories: CategoryType[] = [
         location: 'Khalid Lagoon',
         duration: '2-3 hours',
         category: 'Waterfront',
-        image: '/sharjah/majaz-waterfront.jpg',
+        image: 'https://photosofplaces.netlify.app/images/sharjah/Al-Majaz-Waterfront.jpg',
         highlights: [
           "Musical fountain",
           "Restaurants",
@@ -50,11 +50,11 @@ export const categories: CategoryType[] = [
       {
         id: 'sharjah-art-museum',
         name: 'Sharjah Art Museum',
-        description: 'A renowned museum showcasing a rich collection of contemporary and classical artworks.',
+        description: 'The largest art museum in the Gulf, showcasing local and international art.',
         location: 'Arts Area, Heart of Sharjah',
         duration: '2-3 hours',
         category: 'Museum',
-        image: '/api/placeholder/800/600',
+        image: 'https://photosofplaces.netlify.app/images/sharjah/Sharjah-Art-Museum.jpg',
         highlights: [
           "Contemporary art collections",
           "Temporary exhibitions",
@@ -102,7 +102,7 @@ export const categories: CategoryType[] = [
         location: 'Corniche Street',
         duration: '2-3 hours',
         category: 'Museum',
-        image: '/sharjah/islamic-museum.jpg',
+        image: 'https://photosofplaces.netlify.app/images/sharjah/Sharjah-Museum-Islamic-Civilization.jpg',
         highlights: [
           "Islamic artifacts",
           "Cultural exhibits",
